@@ -20,4 +20,4 @@ There are four lifecycle methods associated with them:
 
 References:
 
-- [MDN Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+- [MDN Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components){:target="\_blank"}
