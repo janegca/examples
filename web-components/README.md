@@ -14,7 +14,7 @@ There are four lifecycle methods associated with them:
 
 ## Examples
 
-- [User Card](https://janegca.github.io/examples/web-components/user-card/user-card.html)
+- [User Card](https://janegca.github.io/examples/web-components/user-card/user-card.html){:target="\_blank"}
   A custom user card with photo, text, and a hide/show info button and some
   styling.
 
