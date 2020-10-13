@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Component Example - User Card</title>
+    <script src="user-card.js" defer></script>
+  </head>
+  <body>
+    <h3>An example of a custom web component: User Card</h3>
+    <user-card
+      name="John Doe"
+      avatar="https://randomuser.me/api/portraits/men/1.jpg"
+    >
+      <div slot="email">johndoe@email.com</div>
+      <div slot="phone">555-123-4567</div>
+    </user-card>
+    <user-card
+      name="Jane Doe"
+      avatar="https://randomuser.me/api/portraits/women/1.jpg"
+    >
+      <div slot="email">janedoe@email.com</div>
+      <div slot="phone">555-123-7654</div>
+    </user-card>
+    <h4>References:</h4>
+    <ul>
+      <li>
+        Based on the tutorial
+        <a href="https://www.youtube.com/watch?v=PCWaFLy3VUo"
+          >Web Components Crash Course</a
+        >
+        from Traversy Media.
+      </li>
+    </ul>
+  </body>
+</html>
