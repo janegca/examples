@@ -14,10 +14,10 @@ There are four lifecycle methods associated with them:
 
 ## Examples
 
-- [User Card](https://janegca.github.io/examples/web-components/user-card/user-card.html){:target="\_blank"}
+- [User Card](https://janegca.github.io/examples/web-components/user-card/user-card.html)
   A custom user card with photo, text, and a hide/show info button and some
   styling.
 
 References:
 
-- [MDN Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components){:target="\_blank"}
+- [MDN Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
