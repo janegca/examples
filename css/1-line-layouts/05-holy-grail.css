@@ -1,0 +1,70 @@
+/*-- Custom Properties -- */
+:root {
+  --clr-bg-aside-left: lightblue;
+  --clr-bg-aside-right: yellow;
+  --clr-bg-footer: wheat;
+  --clr-bg-header: lightpink;
+  --clr-bg-main: coral;
+}
+
+/*-- Global Styling -- */
+body {
+  display: grid;
+  height: 100vh;
+
+  /* The Layout 
+      grid-template: rows / columns
+
+      auto -- size based on content
+      1fr -- size depends on remaining space
+  */
+  grid-template: auto 1fr auto / auto 1fr auto; /* 3 rows / 3 columns */
+
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+/* Grid columns are seen as:
+   1       2       3       4       5 ...
+   | col 1 | col 2 | col 3 | col 4 | ...
+
+   So to indicate the span of 3 columns:
+    start at line 1 and go to line 4 => 1 / 4
+*/
+
+header,
+footer {
+  padding: 2rem;
+}
+
+header {
+  background: var(--clr-bg-header, lightpink);
+  grid-column: 1 / 4; /* full width (3 columns) */
+}
+
+footer {
+  background: var(--clr-bg-footer, wheat);
+  text-align: center;
+  grid-column: 1 / 4; /* full width (3 columns) */
+}
+
+main {
+  background: var(--clr-bg-main, coral);
+  grid-column: 2 / 3; /* middle column */
+}
+
+/*-- Component Styling -- */
+.left-sidebar {
+  background: var(--clr-bg-aside-left, lightblue);
+  grid-column: 1 / 2; /* first column */
+}
+
+.right-sidebar {
+  background: var(--clr-bg-aside-right, yellow);
+  grid-column: 3 / 4; /* third column */
+}
+
+.left-sidebar,
+.right-sidebar {
+  padding: 1rem;
+}

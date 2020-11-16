@@ -1,0 +1,69 @@
+/*-- Custom Properties -- */
+:root {
+  --clr-pink: hsl(335, 52%, 92%);
+  --clr-pink--b: hsl(335, 82%, 86%);
+  --clr-green: hsl(100, 64%, 86%);
+  --clr-green--b: hsl(100, 41%, 76%);
+  --clr-blue: hsl(187, 61%, 79%);
+  --clr-blue--b: hsl(187, 54%, 68%);
+  --clr-purple: hsl(283, 24%, 86%);
+  --clr-purple--b: hsl(283, 43%, 80%);
+}
+
+/*-- Colour Classes -- */
+.blue {
+  background-color: var(--clr-blue);
+  border: 1px solid var(--clr-blue--b);
+}
+
+.green {
+  background-color: var(--clr-green);
+  border: 1px solid var(--clr-green--b);
+}
+
+.pink {
+  background-color: var(--clr-pink);
+  border: 1px solid var(--clr-pink--b);
+}
+
+.purple {
+  background-color: var(--clr-purple);
+  border: 1px solid var(--clr-purple--b);
+}
+
+/*-- Global Styling -- */
+/* The Layout 
+      grid-template-columns: repeat(auto-fit, minmax(<base>, 1fr))
+
+      Use auto-fill to see different behaviours at larger screen sizes
+*/
+
+body {
+  display: grid;
+  height: 100vh; /* tied to viewport height */
+  grid-gap: 1rem;
+
+  /* uncomment and try out with both auto-fit and auto-fill  */
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+  font-family: system-ui, sans-serif;
+}
+
+/*-- Component Styling -- */
+.parent {
+  display: grid;
+  grid-gap: 1rem;
+  /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.child {
+  display: grid;
+  place-items: center;
+
+  border-radius: 1em;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+}

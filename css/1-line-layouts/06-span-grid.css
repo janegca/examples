@@ -1,0 +1,45 @@
+/*-- Custom Properties -- */
+:root {
+  --clr-coral: hsl(23, 83%, 82%);
+  --clr-pink: hsl(335, 52%, 92%);
+  --clr-yellow: hsl(42, 97%, 85%);
+  --clr-blue: hsl(187, 61%, 79%);
+}
+
+/*-- Global Styling -- */
+body {
+  /* The Layout 
+      grid-template-columns: repeat(number, size);
+  */
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr); /* 12 cols, 1 part each */
+
+  font-family: system-ui, sans-serif;
+}
+
+div {
+  display: grid;
+  place-items: center;
+}
+
+/*-- Span Styling -- */
+.span-12 {
+  background: var(--clr-pink, lightpink);
+  grid-column: 1 / 13;
+}
+
+.span-6 {
+  background: var(--clr-blue, lightblue);
+  grid-column: 1 / 7;
+}
+
+.span-4 {
+  background: var(--clr-coral, coral);
+  grid-column: 4 / 9;
+}
+
+.span-2 {
+  background: var(--clr-yellow, yellow);
+  grid-column: 3 / 5;
+}

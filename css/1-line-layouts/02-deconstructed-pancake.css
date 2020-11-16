@@ -1,0 +1,36 @@
+/*-- Custom Properties -- */
+:root {
+  --clr-green: hsl(100, 64%, 86%);
+  --clr-green--b: hsl(100, 41%, 76%);
+}
+
+/*-- General Styling -- */
+body {
+  font-family: system-ui, serif;
+}
+
+/* -- Component Styling -- */
+.parent {
+  /* The Layout */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.child {
+  /* Flex Item Behaviour 
+     flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] 
+
+     flex: 0 1 <baseWidth>
+     flex: 1 1 <baseWidth>
+  */
+  flex: 0 1 150px;
+
+  background-color: var(--clr-green, lightgreen);
+  border: 1px solid var(--clr-green--b, green);
+  border-radius: 1em;
+  font-size: 2rem;
+  text-align: center;
+  padding: 3rem;
+  margin: 5px;
+}

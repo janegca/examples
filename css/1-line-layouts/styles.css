@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700&display=swap");
+
+/*-- Custom Colour Properties --
+      hsl Colours are from Una Kravets examples.
+      Renamed here following Kevin Powell's property naming style.
+*/
+:root {
+  --clr-bg-primary: #eef9fd;
+  --clr-coral: hsl(23, 83%, 82%);
+  --clr-coral--b: hsl(23, 99%, 75%);
+  --clr-pink: hsl(335, 52%, 92%);
+  --clr-pink--b: hsl(335, 82%, 86%);
+  --clr-yellow: hsl(42, 97%, 85%);
+  --clr-yellow--b: hsl(42, 100%, 73%);
+  --clr-green: hsl(100, 64%, 86%);
+  --clr-green--b: hsl(100, 41%, 76%);
+  --clr-blue: hsl(187, 61%, 79%);
+  --clr-blue--b: hsl(187, 54%, 68%);
+  --clr-purple: hsl(283, 24%, 86%);
+  --clr-purple--b: hsl(283, 43%, 80%);
+}
+
+/*-- Colour Utility Classes --*/
+.coral {
+  background-color: var(--clr-coral);
+  border: 1px solid var(--clr-coral--b);
+}
+
+.pink {
+  background-color: var(--clr-pink);
+  border: 1px solid var(--clr-pink--b);
+}
+
+.yellow {
+  background-color: var(--clr-yellow);
+  border: 1px solid var(--clr-yellow--b);
+}
+
+.green {
+  background-color: var(--clr-green);
+  border: 1px solid var(--clr-green--b);
+}
+
+.blue {
+  background-color: var(--clr-blue);
+  border: 1px solid var(--clr-blue--b);
+}
+
+.purple {
+  background-color: var(--clr-purple);
+  border: 1px solid var(--clr-purple--b);
+}
+
+.white {
+  background-color: white;
+}
+
+/*-- General Styling --*/
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--clr-bg-primary, white);
+  padding: 2rem;
+  height: 100vh;
+  width: 70rem;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}

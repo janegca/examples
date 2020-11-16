@@ -1,0 +1,61 @@
+/* Custom Properties */
+:root {
+  --clr-bg: wheat;
+  --clr-green: hsl(100, 64%, 86%);
+  --clr-green--b: hsl(100, 41%, 76%);
+  --clr-blue: hsl(187, 61%, 79%);
+  --clr-blue--b: hsl(187, 54%, 68%);
+  --clr-purple: hsl(283, 24%, 86%);
+  --clr-purple--b: hsl(283, 43%, 80%);
+}
+
+/* Color Classes */
+.green {
+  background-color: var(--clr-green, lightgreen);
+  border: 1px solid var(--clr-green--b, green);
+}
+
+.blue {
+  background-color: var(--clr-blue, lightblue);
+  border: 1px solid var(--clr-blue--b, blue);
+}
+
+.purple {
+  background-color: var(--clr-purple, rgb(243, 217, 243));
+  border: 1px solid var(--clr-purple--b, purple);
+}
+
+/* General Styling */
+body {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 grid boxes of equal size */
+
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* Component Styling */
+.card {
+  /* The Layout 
+      justify-content: space-between
+
+      Extra space goes 'between' the two outer elements, so gets
+      allocated to the middle element
+  */
+  display: flex;
+  flex-direction: column; /* Layout items in a column */
+  justify-content: space-between;
+
+  background: var(--clr-bg, wheat);
+  padding: 1rem;
+}
+
+.visual {
+  height: 100px;
+  width: 100%;
+  margin: 0.5rem 0;
+}

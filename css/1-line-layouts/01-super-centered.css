@@ -1,0 +1,46 @@
+/*-- Custom Properties -- */
+:root {
+  --clr-blue: hsl(187, 61%, 79%);
+  --clr-blue--b: hsl(187, 54%, 68%);
+  --clr-red: lightpink;
+  --clr-red--b: red;
+}
+
+/*-- Colour Classes -- */
+.blue {
+  background-color: var(--clr-blue);
+  border: 1px solid var(--clr-blue--b);
+}
+
+.red {
+  background-color: var(--clr-red);
+  border: 1px solid var(--clr-red--b);
+}
+
+/*-- General Styling -- */
+body {
+  font-family: system-ui, serif;
+  margin: 3rem;
+}
+
+/*-- Component Styling -- */
+.parent {
+  /* The Layout 
+        place-items: center
+  */
+  display: grid;
+  place-items: center;
+
+  width: 300px;
+  height: 300px;
+
+  resize: both;
+  overflow: auto;
+}
+
+.child {
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+}

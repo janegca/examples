@@ -1,0 +1,54 @@
+/*-- Custom Properties --*/
+:root {
+  --clr-yellow: hsl(42, 97%, 85%);
+  --clr-yellow--b: hsl(42, 100%, 73%);
+  --clr-purple: hsl(283, 24%, 86%);
+  --clr-purple--b: hsl(283, 43%, 80%);
+}
+
+/*-- Color Classes --*/
+.yellow {
+  background-color: var(--clr-yellow);
+  border: 1px solid var(--clr-yellow--b);
+}
+
+.purple {
+  background-color: var(--clr-purple);
+  border: 1px solid var(--clr-purple--b);
+}
+
+/*-- General Styling -- */
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/*-- Component Styling -- */
+.visual {
+  height: 100px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.card {
+  /* The Layout 
+      clamp(<min>, <actual>, <max>) [not supported in Safari]
+      the element will stop shrinking when the <min> is reached
+      and stop growing when the <max> is reached
+      it prefers its <actual> size
+
+      can clamp on characters (ch) or rem's or em's
+  */
+  display: flex;
+  flex-direction: column;
+  width: clamp(45ch, 50%, 75ch); /* grows between 45 to 75 characters wide */
+
+  padding: 1rem;
+}

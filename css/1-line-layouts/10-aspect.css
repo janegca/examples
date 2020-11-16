@@ -1,0 +1,47 @@
+/*-- Custom Properties --*/
+:root {
+  --clr-green: hsl(100, 64%, 86%);
+  --clr-green--b: hsl(100, 41%, 76%);
+  --clr-blue: hsl(187, 61%, 79%);
+  --clr-blue--b: hsl(187, 54%, 68%);
+}
+
+/*-- Color Classes --*/
+.green {
+  background-color: var(--clr-green);
+  border: 1px solid var(--clr-green--b);
+}
+
+.blue {
+  background-color: var(--clr-blue);
+  border: 1px solid var(--clr-blue--b);
+}
+
+/*-- General Styling --*/
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/*-- Component Styling --*/
+.card {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.visual {
+  /* aspect-ratio is not supported yet
+        in future it will allow the element to maintain its designated
+        aspect/ratio as it shrinks and grows
+  */
+  aspect-ratio: 16/9;
+  margin: 0.5rem 0;
+}

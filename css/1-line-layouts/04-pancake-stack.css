@@ -1,0 +1,39 @@
+/*-- Custom Properties -- */
+:root {
+  --clr-bg-footer: wheat;
+  --clr-bg-header: lightpink;
+  --clr-bg-main: coral;
+}
+
+/*-- General Styling -- */
+body {
+  /* The Layout 
+      grid-template-rows: auto 1fr auto
+
+      auto -- top and bottom rows will be sized according to their content
+      1fr  -- the middle row will take up all remaining space (fr=fraction) 
+  */
+  display: grid;
+  height: 100vh; /* tied to viewport height */
+  grid-template-rows: auto 1fr auto;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+header,
+footer {
+  padding: 2rem;
+}
+
+header {
+  background: var(--clr-bg-header, #acacac);
+}
+
+main {
+  background: var(--clr-bg-main, white);
+}
+
+footer {
+  background: var(--clr-bg-footer, #acacac);
+  text-align: center;
+}

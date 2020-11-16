@@ -1,5 +1,7 @@
 # CSS Examples
 
+- [1 Line CSS Layouts](https://janegca.github.io/examples/css/1-line-layouts/1-line-layouts.html)
+  10 examples of 1-line CSS layouts based on Una Kravets examples
 - [details-summary](https://janegca.github.io/examples/css/details-summary/details-summary.html)
   Styling the HTML `details` and `summary` elements (based on a
   [Design Course Tutorial](https://www.youtube.com/watch?v=PQtpZZQU0u0))
