@@ -6,7 +6,7 @@
   heart drawn with CSS
 - [details-summary](https://janegca.github.io/examples/css/details-summary/details-summary.html)
   Styling the HTML `details` and `summary` elements
-- [Grid Auto Columns](https://janegca/github.io/examples/css/grid-auto-cols/index.html)
+- [Grid Auto Columns](https://janegca.github.io/examples/css/grid-auto-cols/grid-auto-cols.html)
   Responsive columns with one line of CSS
 - [simple-card](https://janegca.github.io/examples/css/simple-card/simple-card.html)
   A simply styled card from a [freeCodeCamp](https://freecodecamp.org) "Applied
