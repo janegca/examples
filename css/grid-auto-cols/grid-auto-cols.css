@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700&display=swap");
+body {
+  font-family: Nunito, sans-serif;
+  margin: 0;
+}
+
+h1,
+header p {
+  padding-left: 2rem;
+}
+
+.container {
+  padding: 3em;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+  /*
+    auto-fit creates as many columns as will accommodate cards 250px wide
+    If auto-fill is used the cards will not grow, extra space will be filled 
+    by empty 250px wide columns
+   */
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.container .quote {
+  padding: 2em;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container .quote p {
+  margin-top: 0;
+}
+
+.container .quote span {
+  font-weight: bold;
+  position: relative;
+  margin-left: 1em;
+}
+
+.container .quote span::before {
+  /* adds a dash in front of the name */
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0.6em;
+  border-bottom: 1px solid black;
+  top: 0.6em;
+  left: -1em;
+}
+
+@media (min-width: 550px) {
+  .span-2 {
+    /* at >= 550px , the element will span 2 columns
+       at < 550px, the element will only take up 1 column
+    */
+    grid-column: auto / span 2;
+  }
+}
+/*# sourceMappingURL=grid-auto-cols.css.map */
