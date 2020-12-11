@@ -9,7 +9,7 @@
   elements with `static` positions)
 - the offsets are relative to the elements _positioning context_
 
-### `position: static`
+### [`position: static`](https://janegca.github.io/examples/css/positioning/pos-static.html)
 
 - the default position value, the element maintains its position in the normal
   HTML document flow
