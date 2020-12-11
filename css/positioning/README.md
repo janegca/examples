@@ -16,10 +16,7 @@
 - the offset properties (`top left bottom right`) and the `z-index` properties
   have **no effect** on statically positioned elements
 
-Example:
-[Position Static](https://janegca.github.io/examples/css/positioning/pos-static.html)
-
-### `position: relative`
+### [`position: relative`](https://janegca.github.io/examples/css/positioning/pos-relative.html)
 
 - creates a context for itself and its `position: absolute` descendants
 - the element's original position is the one it holds in the normal flow
@@ -31,7 +28,7 @@ Example:
 - if the element's `z-index` is changed from the default `auto` a new _stacking
   context_ is created
 
-### `position: absolute`
+### [`position: absolute`](https://janegca.github.io/examples/css/positioning/pos-absolute.html)
 
 - creates a positioning context relative to another element on the page i.e. a
   positioned ancestor or, if it has no positioned ancestors, the viewport itself
@@ -45,7 +42,7 @@ Example:
   fill its parent, set all four offset properties (`top right bottom left`) to
   zero
 
-### `position: fixed`
+### [`position: fixed`](https://janegca.github.io/examples/css/positioning/pos-fixed.html)
 
 - creates a positioning context relative to the viewport (unless an ancestor has
   its `transform`, `filter`, or `perspective` property set to other than the
@@ -56,7 +53,7 @@ Example:
   'fixed' in the viewport regardless of how the page is moved
 - a new stacking context is always created
 
-### `position: sticky`
+### [`position: sticky`](https://janegca.github.io/examples/css/positioning/pos-sticky.html)
 
 - creates a positioning context relative to the nearest ancestor's scroll port
 - it behaves like a relatively positioned element until a certain point in the
@@ -89,7 +86,7 @@ References:
 
 - any applied transforms are relative to the element's `transform-origin`
 
-### transform-origin
+### [`transform-origin`](https://janegca.github.io/examples/css/positioning/transform-origin.html)
 
 - while any elements default, **initial coordinate system** origin is the top,
   left corner, the default coordinate system for any transform is the center of
@@ -103,6 +100,11 @@ References:
     - y-axis (vertical): top => 0%, bottom => 100%
     - center => (x,y) => 50%, 50%
   - z-value: must always be represented as `length`
+- other available transforms:
+  - [`transform: translate()`](https://janegca.github.io/examples/css/positioning/transform-translate.html)
+  - [`transform: translateX(), translateY()`](https://janegca.github.io/examples/css/positioning/transform-translate-xy.html)
+  - [`transform: scale()`](https://janegca.github.io/examples/css/positioning/transform-scale.html)
+  - [`transform: rotate(), skewX(), skewY()`](https://janegca.github.io/examples/css/positioning/transform-rotate-skew.html)
 
 References:
 
