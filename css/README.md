@@ -8,7 +8,8 @@
   Styling the HTML `details` and `summary` elements
 - [Grid Auto Columns](https://janegca.github.io/examples/css/grid-auto-cols/grid-auto-cols.html)
   Responsive columns with one line of CSS
-- [Positioning Elements](https://janegca.github.io/exmples/css/README.md)
+- [Positioning Elements](https://janegca.github.io/examples/css/README.md)
+  Examples of how elements behave in various positioning contexts
 - [simple-card](https://janegca.github.io/examples/css/simple-card/simple-card.html)
   A simply styled card from a [freeCodeCamp](https://freecodecamp.org) "Applied
   Visual Design" example
