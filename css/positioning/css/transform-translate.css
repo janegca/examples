@@ -1,0 +1,38 @@
+@import url(transform-shared.css);
+
+.container {
+  margin-bottom: 15vw;
+}
+
+/* -- Individual Boxes -- */
+#box1 {
+  transform: translate(5vw);
+}
+
+#box2 {
+  transform: translate(-5vw);
+}
+
+#box3 {
+  background-color: crimson;
+  transform: translate(5vw, -5vw);
+}
+
+#box4 {
+  background-color: crimson;
+  transform: translate(-5vw, 5vw);
+}
+
+#box5 {
+  background-color: crimson;
+  transform: translate(50%, 30%);
+}
+
+#box6 {
+  transform: translate(-100%);
+}
+
+#box7 {
+  background-color: crimson;
+  transform: translate(-10vw, 10vw);
+}

@@ -1,0 +1,39 @@
+@import url(transform-shared.css);
+
+#a1 {
+  /* positive for clockwise (top, right, bottom, left) */
+  transform: rotate(45deg);
+}
+
+#a2 {
+  /* negative for anti-clockwise */
+  transform: rotate(-45deg);
+}
+
+#a3 {
+  transform: rotate(2rad);
+}
+
+#a4 {
+  transform: rotate(0.5turn);
+}
+
+#a5 {
+  filter: hue-rotate(180deg);
+  transform: skewX(30deg);
+}
+
+#a6 {
+  filter: hue-rotate(180deg);
+  transform: skewX(-30deg);
+}
+
+#a7 {
+  filter: hue-rotate(180deg);
+  transform: skewY(45deg);
+}
+
+#a8 {
+  filter: hue-rotate(180deg);
+  transform: skewY(-45deg);
+}

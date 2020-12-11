@@ -1,0 +1,41 @@
+@import url(transform-shared.css);
+
+#sman1 {
+  /* scale vertically */
+  transform: scale(1, 2);
+}
+
+#sman2 {
+  /* scale horizontally */
+  transform: scale(2, 1);
+}
+
+#sman3 {
+  /* scale vertically and horizontally */
+  transform: scale(1.5, 1.5);
+}
+
+#sman4 {
+  /* increase overall size */
+  transform: scale(1.5);
+}
+
+#sman5 {
+  /* shrink to half-size */
+  transform: scale(0.5);
+}
+
+#sman6 {
+  /* flip on x-axis (mirror image) */
+  transform: scale(-1, 1);
+}
+
+#sman7 {
+  /* flip on y-axis (invert image) */
+  transform: scale(1, -1);
+}
+
+#sman8 {
+  /* flip on both axes */
+  transform: scale(-1);
+}

@@ -1,0 +1,66 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(1rem + 0.5vw);
+  line-height: 1.8rem;
+
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+code {
+  display: inline-block;
+  background-color: #dedede;
+  font-weight: bold;
+  padding: 0 0.3em;
+}
+
+.container {
+  max-width: 70rem;
+  margin-top: 0;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boxes {
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+.wrap {
+  width: 10vw;
+  height: 10vw;
+  border: 2px solid grey;
+  display: inline-block;
+  margin: 2vw;
+}
+
+/* all boxes start with the default 'static' position */
+.box {
+  width: 10vw;
+  height: 10vw;
+  background-color: steelblue;
+  color: white;
+}
+
+.accent {
+  background-color: gold;
+}
+
+/* absolutely positioned dots are contained by their parent/ancestor 
+   IF the parent/ancestor is a positioned element itself (i.e. does not 
+   have the default 'postion: static' or some other property that creates
+   a positioned element i.e. transform, filter, perspective
+*/
+.dot {
+  display: block;
+  position: absolute;
+  height: 2vw;
+  width: 2vw;
+  background-color: hsl(0, 100%, 50%);
+  border-radius: 50%;
+  margin: 0;
+
+  /* center in its own display block */
+  transform: translate(-50%, -50%);
+}

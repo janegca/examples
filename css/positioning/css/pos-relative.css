@@ -1,0 +1,24 @@
+@import url(pos-shared.css);
+
+/* position and move the highlighted box */
+.box.accent {
+  position: relative;
+  top: 5vw;
+  left: 7vw;
+}
+
+/* center the dot in the highlighted box */
+.accent .dot {
+  top: 50%;
+  left: 50%;
+}
+
+/* move the dot in the last box 
+    - its movement is relative to the viewport as none of its
+      immediate ancestors are positioned elements
+*/
+#last .dot {
+  background-color: midnightblue;
+  top: 50vh;
+  left: 15vw;
+}

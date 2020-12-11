@@ -1,0 +1,7 @@
+@import url(pos-shared.css);
+
+.boxes {
+  position: sticky;
+  top: 5vw;
+  margin-bottom: 1rem;
+}

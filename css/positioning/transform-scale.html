@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/transform-scale.css" />
+    <title>Examples: transform</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Examples of <code>transform: scale(x,y)</code></h1>
+
+      <p>
+        <em>Scale Values</em>: 1 = normal, &lt; 1 = shrink, &gt; 1 = grow, 0 =
+        disappear
+        <br />
+        Negative values will flip the element along the indicated axes.
+        <br />
+        <code>scaleX(x)</code> and <code>scaleY(y)</code> methods are also
+        available.
+      </p>
+
+      <div class="boxes">
+        <div>
+          <code>scale(1,1)</code> <br />
+          No change in size
+        </div>
+        <img src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(1,2)</code> <br />
+          Double in height (vertical), same width
+        </div>
+        <img id="sman1" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(2,1)</code> <br />
+          Double in width (horizontally), same height
+        </div>
+        <img id="sman2" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(1.5,1.5)</code> <br />
+          Increase size horizontally and vertically
+        </div>
+        <img id="sman3" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(1.5)</code> <br />
+          Increase overall size (same as above)
+        </div>
+        <img id="sman4" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(0.5)</code> <br />
+          Shrink to half-size
+        </div>
+        <img id="sman5" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(-1,1)</code> <br />
+          Flip on x-axis (mirror image)
+        </div>
+        <img id="sman6" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(1,-1)</code> <br />
+          Flip on y-axis (invert image)
+        </div>
+        <img id="sman7" src="../images/Snowman.png" alt="" />
+
+        <div>
+          <code>scale(-1)</code> <br />
+          Flip on both axes
+        </div>
+        <img id="sman8" src="../images/Snowman.png" alt="" />
+
+        <!-- end boxes -->
+      </div>
+
+      <h3>
+        <a
+          href="https://commons.wikimedia.org/wiki/Category:Snowman_icons#/media/File:Snowman_icon.png"
+          target="_blank"
+          >Source: Snowman Image</a
+        >
+      </h3>
+
+      <!-- end container -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pos-relative.css" />
+    <title>Position Example: relative</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1>Position Example: relative</h1>
+        <p>
+          An element with a property of
+          <code>position: relative</code> sets up a new positioning context for
+          itself and any descendant that has a property of
+          <code>position: absolute</code>. The element remains in its original
+          position in the normal document flow.
+        </p>
+        <p>
+          The offset properties <code>top right bottom left</code> can be used
+          to re-position the element <i>relative</i> to its original position.
+          If re-positioned, the space it occupied originally is visually
+          maintained and the re-positioned element will overlay any elements
+          occupying the space in its new position.
+        </p>
+      </div>
+
+      <div class="boxes">
+        <div class="wrap">
+          <div class="box"></div>
+        </div>
+        <div class="wrap">
+          <div class="box accent">
+            <span class="dot"></span>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="box" id="last">
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      <p>
+        In the example above, the highlighted box is moved 5 units down from the
+        top and 7 units to the left of its original position (the box's top left
+        corner). The space it originally occupied is retained, as shown by the
+        empty frame.
+      </p>
+      <p>
+        The red dot (with <code>postion: absolute</code>), nested and centered
+        in the box, moves with it, maintaining its position when the window is
+        resized.
+      </p>
+      <p>
+        On the left there is a dark blue dot whose element (in the HTML) is
+        nested inside the third box. When it is moved 50 units from the top and
+        15 units to the left rather than being moved relative to the box element
+        it is nested within, it is moved relative to the viewport as:
+      </p>
+      <ol>
+        <li>
+          its immediate ancestor (the third box element) is
+          <strong>not</strong> a <i>positioned element</i> (it still has default
+          <code>position: static</code> )
+        </li>
+        <li>there are no other positioned element ancestors</li>
+        <li>
+          no <code>transform perspective</code> or <code>filter</code> property
+          (which can establish a new positioning context) has been set on an
+          ancestor element
+        </li>
+      </ol>
+      The blue dot will move around the viewport as the page is resized.
+    </div>
+  </body>
+</html>

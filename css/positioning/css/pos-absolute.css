@@ -1,0 +1,15 @@
+@import url(pos-shared.css);
+
+/* position and move the highlighted box */
+.box.accent {
+  position: absolute;
+  border: 2px solid goldenrod;
+  top: 25vw;
+  left: 57vw;
+}
+
+/* center the dot in the highlighted box */
+.accent .dot {
+  top: 50%;
+  left: 50%;
+}

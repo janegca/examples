@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pos-absolute.css" />
+    <title>Position Example: absolute</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1>Position Example: absolute</h1>
+        <p>
+          An element with a property of <code>position: absolute</code> creates
+          a positioning context relative to another element on the page i.e. a
+          positioned ancestor or, if it has no positioned ancestors, the root
+          element.
+        </p>
+        <p>
+          The element's offset properties will be relative to the position of
+          the other element i.e. to the top,left of the enclosing parent or the
+          document root.
+        </p>
+        <p>
+          When an absolutely positioned element is moved it is taken out of the
+          normal flow, its original space is <strong>not</strong> maintained,
+          and it will overlap any element found in its new position.
+        </p>
+      </div>
+      <div class="boxes">
+        <div class="wrap">
+          <div class="box"></div>
+        </div>
+
+        <div class="box accent">
+          <span class="dot"></span>
+        </div>
+
+        <div class="wrap">
+          <div class="box"></div>
+        </div>
+      </div>
+      <p>
+        The highlighted box in the above example is moved 25 units from the top
+        and 57 units to the left of the page's top, left corner. The space it
+        would normally have occupied (between the two blue boxes) has collapsed.
+        The red dot it contains is also absolutely positioned, but, as its
+        container is a positioned element, it stays confined within in it.
+      </p>
+      <p>
+        The highlighted box, and the absolutely positioned red dot within it,
+        will move independently of the blue boxes as the page is resized.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pos-fixed.css" />
+    <title>Position Example: fixed</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1>Position Example: fixed</h1>
+        <p>
+          An element with a property of <code>position: fixed</code> creates a
+          positioning context relative to the viewport (unless an ancestor has
+          its <code>transform filter</code> or <code>perspective</code> property
+          set to other than the default of <code>none</code>) and a new stacking
+          (z-index) context.
+        </p>
+        <p>
+          The offset property values are always relative to the element that
+          establishes the positioning context. In this example, the highlighted
+          box uses <code>position: fixed</code>. As it has no positioned
+          ancestor the viewport establishes its positioning context. The red dot
+          also has <code>position: fixed</code> BUT the blue box it is nested in
+          (in the HTML) has a <code>transform: translate(0)</code> which sets up
+          a new positioning context that causes the dot to be fixed relative to
+          the blue box, thus when the page is scrolled or resized the
+          highlighted box is 'fixed' to the viewport and the red dot remains
+          fixed to its blue box ancestor.
+        </p>
+        <p>
+          The element is taken out of the normal flow (its original space is not
+          preserved) and it will overlap any elements found in its new position.
+          A <code>fixed</code> element is <strong>not</strong> effected by
+          scrolling; it stays exactly where it is, 'fixed' to the viewport or
+          the ancestor that establishes a positioning context, regardless of how
+          the page is moved.
+        </p>
+      </div>
+      <div class="boxes">
+        <div class="wrap">
+          <div class="box"></div>
+        </div>
+
+        <div class="box accent"></div>
+
+        <div class="wrap">
+          <div class="box dot-ancestor">
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      <p>
+        Content added to allow page scrolling (the 'fixed' elements retain their
+        positions )...
+      </p>
+      <p>
+        <!-- cSpell: disable -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        dolores voluptatibus suscipit architecto ad neque quo laborum, atque
+        odit eos. Officia aperiam magnam est nam. Repudiandae sunt sequi
+        architecto ipsa. Nisi odio obcaecati provident quae facere et, maxime
+        molestiae magni perferendis aperiam tempore, totam, ut quibusdam! Sed
+        obcaecati hic dignissimos libero, alias veritatis quo, qui, amet harum
+        error rem dolorum. Eaque incidunt, sed vitae saepe aperiam est possimus?
+        Repudiandae ducimus illum praesentium possimus sint. Et, animi excepturi
+        perferendis aut nemo voluptatibus, consectetur dolore earum similique
+        saepe corporis numquam, aperiam placeat? Consequatur voluptatum,
+        necessitatibus, assumenda beatae porro mollitia sequi illo error iure
+        ratione quos aliquam nemo ad vel culpa accusamus est perferendis
+        laudantium voluptates quidem fuga tempore ullam! Velit, aspernatur quia.
+        Velit numquam, perspiciatis, vel a blanditiis voluptatibus, vero dicta
+        sit magnam non laboriosam voluptates ea tenetur sequi tempore? Molestiae
+        at veritatis repudiandae consequatur et voluptatem laborum a totam sed
+        assumenda.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, autem
+        at quidem nesciunt commodi, doloribus optio deleniti praesentium, nisi
+        aspernatur minima! Recusandae beatae omnis quia, ut natus veniam minus
+        doloribus. Ducimus voluptatibus, iure eaque pariatur recusandae tempore
+        sequi dolorem, ex, nemo animi incidunt iste provident magni. Non eius
+        accusantium omnis magni saepe explicabo cum sapiente, a labore accusamus
+        repellendus nam. Quaerat magnam recusandae dolores reprehenderit quos
+        quasi dolorem nemo dignissimos illum quas magni, dolore aliquam
+        provident corrupti ipsam nobis culpa obcaecati repudiandae et? Explicabo
+        vel earum et itaque, excepturi aperiam? Molestiae praesentium quae culpa
+        quod fugiat repudiandae? Possimus commodi totam similique autem fugit
+        dolorem esse! Quisquam, corporis a quo, ipsa quod impedit maiores
+        pariatur nihil amet temporibus ullam, deleniti optio. Reprehenderit rem
+        dolores cum iste voluptates veniam velit, soluta amet accusantium quasi
+        dolor beatae. Aut pariatur itaque, velit facilis atque adipisci
+        consequatur ipsa eos accusantium id excepturi, sunt est. Odio.
+      </p>
+    </div>
+  </body>
+</html>

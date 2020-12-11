@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pos-shared.css" />
+    <title>Position Example: static</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1>Position Example: static</h1>
+        <p>
+          By default, all elements have their position property set to
+          <code>position: static</code>
+        </p>
+        <p>
+          The elements are part of the normal flow context, appearing as they
+          are laid out in the HTML document.
+        </p>
+        <p>
+          The <i>offset properties</i> <code>top right bottom left</code> and
+          the <code>z-index</code> property have <strong>no effect</strong> on
+          statically positioned elements.
+        </p>
+      </div>
+      <div class="boxes">
+        <div class="wrap">
+          <div class="box"></div>
+        </div>
+        <div class="wrap">
+          <div class="box accent"></div>
+        </div>
+        <div class="wrap">
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

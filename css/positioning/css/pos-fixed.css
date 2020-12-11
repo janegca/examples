@@ -1,0 +1,26 @@
+@import url(pos-shared.css);
+
+.container {
+  max-width: 60rem;
+}
+
+.box.accent {
+  position: fixed;
+  border: 2px solid goldenrod;
+  top: 5vh;
+  left: 5vw;
+}
+
+/* dot positioning */
+.dot-ancestor {
+  /* create a new positioning context */
+  transform: translate(0);
+}
+
+.dot {
+  position: fixed;
+  top: -1vw;
+  left: -1vw;
+  /* top: 50%;
+  left: 50%; */
+}

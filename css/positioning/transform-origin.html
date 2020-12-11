@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/transform-origin.css" />
+    <title>Example: transform-origin</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Using Different Origin Coordinates</h1>
+      <h2>
+        The red dot represents the square's
+        <code>transform-origin</code> position values. Hover over a square to
+        rotate it 45&deg;
+      </h2>
+      <div class="boxes">
+        <div class="wrap">
+          <div class="element element-1">
+            <span class="dot pos-center"></span>
+            50% 50%
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="element element-2">
+            <span class="dot pos-top-left"></span>
+            top left
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="element element-3">
+            <span class="dot pos-bottom-right"></span>
+            100% 100%
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="element element-4">
+            <span class="dot pos-fixed"></span>
+            100px 50px
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <p>
+          The default position for <code>transform-origin</code> is an element's
+          center <code>(x,y) = (50%, 50%).</code>.
+        </p>
+        <p>
+          The %'s are relative to the <i> rendering box</i> (content, border,
+          padding, etc) and represent offsets.
+        </p>
+        <p>
+          On the horizontal (x-axis), the offset properties left and right have
+          the values: <code>left: 0%</code>, <code>right: 100%</code>.
+        </p>
+        <p>
+          On the vertical (y-axis), the offset properties top and bottom have
+          the values:
+          <code>top: 0%</code>, <code>bottom: 100%</code>.
+        </p>
+        <p>
+          If a <code>length</code> (units i.e. px, em, rem, etc.) is used, it
+          represents the offset from the top, left corner of the rendering box.
+        </p>
+        <p>
+          Any value assigned to the <code>z-axis</code> (used to give a sense of
+          depth) must be given in units, as a <code>length</code>, not
+          percentages.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
