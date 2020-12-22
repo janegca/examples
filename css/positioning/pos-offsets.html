@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/pos-offsets.css" />
+    <title>Position Offset Properties</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1>Position Offset Properties</h1>
+        <p>
+          There are four offset properties: <code>top left bottom right</code>.
+        </p>
+        <p>
+          Positive offset values push the element sides inwards, towards the
+          center of the containing block. Negative values push the sides
+          outwards, away from the containing block sides. The values are always
+          relative to the corresponding edges of the containing block.
+        </p>
+        <p>
+          The entire element, including its margins, paddings, borders, etc. and
+          the space they occupy, is 'moved'.
+        </p>
+        <p>
+          An elements width and height can be limited using
+          <code>min-width max-width</code> along with
+          <code>max-width max-height</code>
+        </p>
+
+        <p>
+          (<em
+            >Note: all the examples have a parent box with
+            <code>position: relative</code> and a child box with
+            <code>position: absolute</code></em
+          >)
+        </p>
+      </div>
+
+      <h2>What can happen with <code>position: absolute</code></h2>
+      <div class="boxes">
+        <p class="wrapped">You might expect to see this:</p>
+        <div class="details">
+          <div class="box parent">
+            <div class="box child"></div>
+          </div>
+        </div>
+        <p class="wrapped">
+          but when you change the child element's position to 'absolute' you see
+          this:
+        </p>
+        <div class="details">
+          <div class="box parent" id="abs1">
+            <div class="box child" id="abs2"></div>
+          </div>
+        </div>
+      </div>
+      <p>
+        <em>What happened to the containing block??</em> If the element has an
+        explicit size and the containing block has no other content, setting the
+        element position to absolute will cause the containing block to collapse
+        as its 'content' (the sized element) has now been removed (taken out of
+        normal flow) and the container, for all intents and purposes, is empty.
+      </p>
+      <p>
+        To make use of implicit sizing (see below) for the purpose of
+        positioning, the containing block must have a size, if it doesn't the %
+        values are meaningless and the element will collapse.
+      </p>
+
+      <h2>Examples</h2>
+      <div class="boxes">
+        <div class="detail">
+          <strong>Initial Position</strong>
+          <div class="box parent">
+            <div class="box child">
+              <code>top: 0</code>
+              <code>left: 0</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Move to bottom, right</strong>
+          <div class="box parent">
+            <div class="box child" id="one">
+              <code>top: 50%</code>
+              <code>left: 50%</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Move to bottom, right with a margin</strong>
+          <div class="box parent">
+            <div class="box child" id="two">
+              <code>top: 50%</code>
+              <code>left: 50%</code>
+              <code>margin: 1vw</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Move to top, right</strong>
+          <div class="box parent">
+            <div class="box child" id="three">
+              <code>top: 0</code>
+              <code>right: 0</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Move to bottom, left</strong>
+          <div class="box parent">
+            <div class="box child" id="four">
+              <code>bottom: 0</code>
+              <code>right: 50%</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Negative Offsets</strong>
+          <div class="box parent">
+            <div class="box child" id="five">
+              <code>top: 50%</code>
+              <code>bottom: -2em</code>
+              <code>left: 75%</code>
+              <code>right: -7em</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Fill Left Side</strong>
+          <div class="box parent">
+            <div class="box child" id="six">
+              <span>width and height not explicitly set</span>
+              <br />
+              <code>top: 0</code>
+              <code>bottom: 0</code>
+              <code>left: 0</code>
+              <code>right: 50%</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Fill Left Side, Explicit Sizing with Padding</strong>
+          <div class="box parent">
+            <div class="box child" id="seven">
+              <span>width and height are explicitly set, padding added</span>
+              <br />
+              <code>width: 50%, height: 50%</code>
+              <code>padding: 2vw</code>
+              <code>top: 0</code>
+              <code>bottom: 0</code>
+              <code>left: 0</code>
+              <code>right: 50%</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Fill Left Side, Implicit Sizing with Padding</strong>
+          <div class="box parent">
+            <div class="box child" id="eight">
+              <span
+                >width and height are not explicitly set, padding added</span
+              >
+              <br />
+              <code>padding: 2vw</code>
+              <code>top: 0</code>
+              <code>bottom: 0</code>
+              <code>left: 0</code>
+              <code>right: 50%</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Enforce a Size</strong>
+          <div class="box parent">
+            <div class="box child" id="nine">
+              <code>top: 10%</code>
+              <code>bottom: 20%</code>
+              <code>left: 50%</code>
+              <code>right: 10%</code>
+              <code>min-width: 10vw</code>
+              <code>min-height: 20vw;</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Without Enforcement</strong>
+          <div class="box parent">
+            <div class="box child" id="ten">
+              <span>without min-width/height</span><br />
+              <code>top: 10%</code>
+              <code>bottom: 20%</code>
+              <code>left: 50%</code>
+              <code>right: 10%</code>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <strong>Enforce while respecting container</strong>
+          <div class="box parent">
+            <div class="box child" id="eleven">
+              <code>min-width: 10vw; height: auto </code>
+              <code>top: 10%</code>
+              <code>bottom: auto</code>
+              <code>left: 50%</code>
+              <code>right: 10%</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

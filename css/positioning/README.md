@@ -34,13 +34,14 @@
   positioned ancestor or, if it has no positioned ancestors, the viewport itself
 - the elements offset properties will be relative to the coordinate origin of
   the other element i.e. to the top,left of the enclosing parent or the viewport
-- when an absolutely positioned element is moved it is _taken out of the normal
-  flow_, its original space is _not_ maintained, and it will overlap any element
-  found in its new position
+- an absolutely positioned element is _taken out of the normal flow_, its
+  original space is _not_ maintained, and it will overlap any element found in
+  its new position
 - the margins of absolutely positioned elements _do not_ collapse
 - an absolutely positioned element is the size of its content, to stretch it to
   fill its parent, set all four offset properties (`top right bottom left`) to
   zero
+- it always behaves as a block element regardless of its original display type
 
 ### [`position: fixed`](https://janegca.github.io/examples/css/positioning/pos-fixed.html)
 
@@ -59,6 +60,8 @@
 - it behaves like a relatively positioned element until a certain point in the
   scroll is reached, at which point it behaves like a `fixed` element
 - the _sticking_ point is determined by the offset property values
+
+### [Offset Properties](https://janegca.github.io/examples/css/positioning/pos-offsets.html)
 
 References:
 
@@ -113,3 +116,5 @@ References:
 - [W3C CSS Transform Editor's Draft](https://drafts.csswg.org/css-transforms)
 - [W3Schools: How to Create Circles](https://www.w3schools.com/howto/howto_css_circles.asp)
 - [W3Schools: How to Centre a Button Vertically](https://www.w3schools.com/howto/howto_css_center_button.asp)
+
+- [Positioning in CSS by Eric A Meyer](https://www.oreilly.com/library/view/positioning-in-css/9781491930366/)

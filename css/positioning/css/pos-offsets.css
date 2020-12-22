@@ -1,0 +1,168 @@
+@import url(pos-shared.css);
+
+code {
+  background-color: transparent;
+}
+
+span {
+  display: inline-block;
+  line-height: 1rem;
+  padding-left: 0.5em;
+}
+
+p.wrapped {
+  text-align: left;
+  width: 10vw;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail {
+  font-size: 1rem;
+}
+
+.box {
+  text-align: left;
+}
+
+.parent {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  margin: 1em;
+}
+
+.child {
+  position: absolute;
+  font-size: 0.8em;
+  background-color: red;
+}
+
+.parent#abs1 {
+  width: auto;
+  height: auto;
+}
+.child#abs2 {
+  position: absolute;
+}
+
+#one {
+  top: 50%;
+  left: 50%;
+}
+
+#two {
+  top: 50%;
+  left: 50%;
+  margin: 1vw;
+}
+
+#three {
+  top: 0;
+  right: 0;
+}
+
+#four {
+  bottom: 0;
+  right: 50%;
+}
+
+/* NOTE: if all box sizes are set to 'auto' parent boxes fully collapse
+         and child boxes collapse to content's size
+         To use implicit sizing, the containing box must have a size
+         and the child element size cannot be absolute
+*/
+/* .box {
+  width: auto;
+  height: auto;
+} */
+
+/* offset bottom is cut off unless width and height are 'auto' */
+#five {
+  width: auto;
+  height: auto;
+
+  top: 50%;
+  bottom: -2em;
+  left: 75%;
+  right: -7em;
+}
+
+/* child box size is now implied by parent box size
+   the settings are equivalent to width: 50%, height: 100%
+*/
+#six {
+  width: auto;
+  height: auto;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+}
+
+/* although explicit sizing, when there are margins and padding, 
+   make a difference. This time the box will overflow the parent 
+*/
+
+#seven {
+  width: 50%;
+  height: 100%;
+  padding: 0.5vw 2vw;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+}
+
+#eight {
+  width: auto;
+  height: auto;
+  padding: 0.5vw 2vw;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+}
+
+/* enforce an element size */
+#nine {
+  width: auto;
+  height: auto;
+
+  top: 10%;
+  bottom: 20%;
+  left: 50%;
+  right: 10%;
+
+  min-width: 10vw;
+  min-height: 20vw;
+}
+
+#ten {
+  width: auto;
+  height: auto;
+
+  top: 10%;
+  bottom: 20%;
+  left: 50%;
+  right: 10%;
+}
+
+/* enforce a size while respecting the container block */
+#eleven {
+  width: auto;
+  height: auto;
+
+  top: 10%;
+  bottom: auto;
+  left: 50%;
+  right: 10%;
+
+  min-width: 10vw;
+}
