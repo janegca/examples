@@ -1,0 +1,104 @@
+@import url(pos-shared.css);
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.parent {
+  position: relative;
+  width: 50vw;
+  height: 35vw;
+  margin: auto;
+}
+
+p {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid;
+}
+p#first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 10em;
+  z-index: 8;
+}
+p#second {
+  position: absolute;
+  top: -0.75em;
+  left: 15%;
+  width: 60%;
+  height: 5.5em;
+  z-index: 4;
+}
+p#third {
+  position: absolute;
+  top: 23%;
+  left: 25%;
+  width: 30%;
+  height: 10em;
+  z-index: 1;
+}
+p#fourth {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 10em;
+  z-index: 0;
+}
+
+.parent.local p {
+  border: 1px solid;
+  background: rgba(221, 221, 221, 0.5);
+  margin: 0;
+}
+.local p#one {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  width: 40%;
+  height: 10em;
+  z-index: 3;
+}
+#two {
+  position: absolute;
+  top: -0.75em;
+  left: 15%;
+  width: 60%;
+  height: 5.5em;
+  z-index: 10;
+}
+#three {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 30%;
+  height: 10em;
+  z-index: 8;
+}
+
+.local p[id] em {
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  width: 10em;
+  height: 5em;
+}
+.local p#one em {
+  z-index: 100;
+  background: hsla(0, 50%, 70%, 0.5);
+}
+#two em {
+  z-index: 10;
+  background: hsla(120, 50%, 70%, 0.5);
+}
+#three em {
+  z-index: -343;
+  background: hsla(240, 50%, 70%, 0.5);
+}

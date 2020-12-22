@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/pos-z-index.css" />
+    <title>Stacking Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Establishing Stacking Order with <code>z-index</code></h1>
+      <h2>Examples are from <em>CSS Positioning</em> by Eric A. Meyer</h2>
+      <div class="parent">
+        <p id="first">First (z-index: 8)</p>
+        <p id="second">Second (z-index: 4)</p>
+        <p id="third">Third (z-index: 1)</p>
+        <p id="fourth">Fourth (z-index: 0)</p>
+      </div>
+
+      <h2>Local Stacking Contexts</h2>
+      <h3>
+        Elements with a z-order create a stacking order for their descendents.
+        <br /><span>Children are always in front of their parents</span>
+      </h3>
+
+      <div class="parent local">
+        <p id="one">
+          [one] (z-index: 3)
+          <em>[one] em (100)</em>
+        </p>
+        <p id="two">
+          [two] (z-index: 10)
+          <em>[two] em (10)</em>
+        </p>
+        <p id="three">
+          [three] (z-index: 8)
+          <em>[three] em (-343) </em>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

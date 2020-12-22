@@ -63,11 +63,24 @@
 
 ### [Offset Properties](https://janegca.github.io/examples/css/positioning/pos-offsets.html)
 
+- four offset properties: `top left bottom right`
+- have no effect unless the element position has been set to something other
+  than the default `static`
+
+### [Stacking Order z-index](https://janegca.github.io/examples/css/positioning/pos-z-index.html)
+
+- z-index establishes an elements stacking order relative to its containing
+  block
+- any element with a z-index set establishes a stacking context for its
+  descendents
+- a z-index of `auto` is treated as `z-index: 0`
+
 References:
 
 - [Codrops CSS Reference: position](https://tympanus.net/codrops/css_reference/position/)
 - [MDN: position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 - [W3C CSS3 Draft: position](https://drafts.csswg.org/css-position-3/#propdef-position)
+- [Positioning in CSS by Eric A Meyer](https://www.oreilly.com/library/view/positioning-in-css/9781491930366/)
 
 ## Transformations
 
@@ -116,5 +129,3 @@ References:
 - [W3C CSS Transform Editor's Draft](https://drafts.csswg.org/css-transforms)
 - [W3Schools: How to Create Circles](https://www.w3schools.com/howto/howto_css_circles.asp)
 - [W3Schools: How to Centre a Button Vertically](https://www.w3schools.com/howto/howto_css_center_button.asp)
-
-- [Positioning in CSS by Eric A Meyer](https://www.oreilly.com/library/view/positioning-in-css/9781491930366/)
