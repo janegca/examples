@@ -3,6 +3,7 @@
 - [1 Line CSS Layouts](https://janegca.github.io/examples/css/1-line-layouts/1-line-layouts.html)
   10 examples of 1-line CSS layouts based on Una Kravets examples
 - [CSS box-model](https://janegca.github.io/examples/css/box-model/box-model.html)
+  Basic `box-model` used by CSS for each element's layout
 - [css heart](https://janegca.github.io/examples/css/heart/heart.html) A simple
   heart drawn with CSS
 - [details-summary](https://janegca.github.io/examples/css/details-summary/details-summary.html)
@@ -15,3 +16,4 @@
   A simply styled card from a [freeCodeCamp](https://freecodecamp.org) "Applied
   Visual Design" example
 - [Transformations](https://janegca.github.io/examples/css/transformations/)
+  using the `transform` property
