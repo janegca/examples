@@ -18,7 +18,7 @@
 
 - any applied transforms are relative to the element's `transform-origin`
 
-## [`transform-origin`](https://janegca.github.io/examples/css/positioning/transform-origin.html)
+## [`transform-origin`](https://janegca.github.io/examples/css/transformations/transform-origin.html)
 
 - while any elements default, **initial coordinate system** origin is the top,
   left corner, the default coordinate system for any transform is the center of
@@ -33,10 +33,10 @@
     - center => (x,y) => 50%, 50%
   - z-value: must always be represented as `length`
 - other available transforms:
-  - [`transform: translate()`](https://janegca.github.io/examples/css/positioning/transform-translate.html)
-  - [`transform: translateX(), translateY()`](https://janegca.github.io/examples/css/positioning/transform-translate-xy.html)
-  - [`transform: scale()`](https://janegca.github.io/examples/css/positioning/transform-scale.html)
-  - [`transform: rotate(), skewX(), skewY()`](https://janegca.github.io/examples/css/positioning/transform-rotate-skew.html)
+  - [`transform: translate()`](https://janegca.github.io/examples/css/transformations/transform-translate.html)
+  - [`transform: translateX(), translateY()`](https://janegca.github.io/examples/css/transformations/transform-translate-xy.html)
+  - [`transform: scale()`](https://janegca.github.io/examples/css/transformations/transform-scale.html)
+  - [`transform: rotate(), skewX(), skewY()`](https://janegca.github.io/examples/css/transformations/transform-rotate-skew.html)
 
 References:
 
