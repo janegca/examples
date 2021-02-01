@@ -18,7 +18,7 @@ body {
   margin: 0;
 
   font-size: calc(1rem + 0.5vw);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* use the section as layout wrapper */
