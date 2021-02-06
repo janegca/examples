@@ -1,0 +1,42 @@
+:root {
+  /* Colors used: lavenderblush, lavender, papayawhip, honeydew */
+  --clr-body: hsl(340, 100%, 97%);
+  --clr-h1: hsl(240, 67%, 94%);
+  --clr-html: hsl(37, 100%, 92%);
+  --clr-para: hsl(120, 100%, 97%);
+
+  --out-body: hsl(340, 100%, 90%);
+  --out-h1: hsl(240, 67%, 80%);
+  --out-html: hsl(37, 98%, 61%);
+  --out-para: hsl(120, 96%, 83%);
+
+  /* Set the base font for all elements
+     This becomes the new 'value' of 1 rem
+     which was originally set by the user or 
+     the 'user agent' (the browser)
+   */
+  font-size: calc(1rem + 0.3em);
+}
+
+html {
+  /* comment out the colour and the viewport will fill with the body
+     element colour
+   */
+  background-color: var(--clr-html);
+  outline: 0.4em dashed var(--out-html);
+}
+
+body {
+  background-color: var(--clr-body);
+  outline: 0.2em solid var(--out-body);
+}
+
+h1 {
+  background-color: var(--clr-h1);
+  outline: 0.1em dashed var(--out-h1);
+}
+
+p {
+  background-color: var(--clr-para);
+  outline: 0.2em dashed var(--out-para);
+}

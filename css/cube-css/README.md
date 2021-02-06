@@ -64,7 +64,7 @@ understand not only the syntax but _how it works_.
 
 ## Block
 
-- a block a building block or component i.e. a button or card
+- a block, a building block, or component i.e. a button or card
 - blocks or components usually have classnames applied i.e. `.my-block .title`
   or `.my-block h2`
 

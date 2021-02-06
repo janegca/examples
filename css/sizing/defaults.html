@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="defaults.css" />
+    <title>The Viewport</title>
+  </head>
+  <body>
+    <h1>Element Sizing Default Behaviour</h1>
+    <p>
+      The <code>html</code> and <code>body</code> dimensions are more accurately
+      shown by their outlines. Their height and background colours only expand
+      to fill their content's area, as shown by the <code>body</code>,
+      <code>h1</code> and <code>p</code> elements. The
+      <code>html</code> element's background colour fills the entire viewport
+      even though its height does not. By default, the width and
+      <code>background-colour</code> of each element extends to the full width
+      of the viewport.
+    </p>
+    <p>
+      The area filled by the background, and the element's height, can be
+      changed using the
+      <code>background-clip</code> property from <code>content-box</code> to
+      <code>border-box</code> or <code>padding-box</code>.
+    </p>
+    <p>
+      Note that the
+      <a
+        href="https://drafts.csswg.org/css-backgrounds-3/#body-background"
+        target="_blank"
+        >CSS specifications
+      </a>
+      advise against setting the <code>background-color</code> for the
+      <code>html</code> element; instead, set it on the body and it will
+      propagate up to the <code>html</code> element. This behaviour is specific
+      to the <code>html</code>, <code>body</code> relationship and is not true
+      of every <code>parent</code>/ <code>child</code> relationship. (Turn off
+      the <code>html</code> elements <code>background-color</code> using the
+      WebDev tools and the entire viewport will fill with the
+      <code>body</code> colour. )
+    </p>
+    <p>
+      By default, the browsers add margins to the <code>body</code> (8px). They
+      add margins and paddings to other elements relative to their root font
+      size. The margins are transparent, the element's
+      <code>background-colour</code> does not extend to them, rather the colour
+      of their parent's or earlier ancestor's background will show through. For
+      example, the top margin of the <code>h1</code> element has the
+      <code>html</code> element's background colour while it's bottom margin is
+      filled with the <code>body</code> element's colour.
+    </p>
+  </body>
+</html>
