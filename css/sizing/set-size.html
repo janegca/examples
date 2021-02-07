@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="set-size.css" />
+    <title>The Viewport</title>
+  </head>
+  <body>
+    <h1>Setting the Page Size</h1>
+    <p>
+      Setting the initial page size can be confusing at times. Here, we want it
+      to equal the the viewport width and height but also be able to scroll
+      vertically (not horizontally) when the content becomes longer.
+    </p>
+    <p>
+      First, lets set the page to the full viewport height. We can do this by
+      setting <code>min-height: 100%</code> on the <code>html</code> element; it
+      inherits from the viewport so the page will have a height equal to
+      <code>100vh</code> or the full height of the browser's visible display
+      area. We'll also add the margins back to the header and paragraphs, and
+      give the paragraphs some padding to make things easier to read.
+    </p>
+    <p>
+      Note that if you try this directly on the <code>body</code> element the
+      page will not expand to fill the window height. Percentage values are
+      relative to the parent container, if no specific height is set on the
+      <code>html</code>
+      element the body will be sized at 100% of zero, and so just default back
+      to its content's height.
+    </p>
+    <p>
+      The <code>height</code> property is not inherited so even though the
+      <code>html</code> element is implicitly equal to the viewport to the
+      elements descendents the width and height values are zero unless they have
+      been explicitly set. This is true for any element, if no explicit width
+      and height are set on the parent element taking a percentage value will be
+      the same as setting width and height to zero regardless of how large the
+      parent element actually is.
+    </p>
+    <h2>A More Direct Approach</h2>
+    <p>
+      In practice, it is much simpler, and more common, to set
+      <code>min-height: 100vh</code> in the <code>body</code> element and, due
+      to the peculiar relationship between the <code>html</code> and
+      <code>body</code> elements, the <code>html</code> height will grow along
+      with the body's height. What the earlier settings demonstrate is why it is
+      better to prefer <code>100vh</code> over <code>100%</code> when setting
+      the page height. This is not true for setting the page width.
+    </p>
+    <h2>Setting the Page Width</h2>
+    <p>
+      We should always prefer to leave the width unset or use the default
+      <code>auto</code> if we need to explicitly set it. Setting the width to
+      <code>100%</code> or <code>100vw</code> will trigger the horizontal scroll
+      bar the minute the vertical scrollbar is triggered, something we do not
+      want, especially on mobile devices. Browsers calculate the full width to
+      be the visible width <em>less</em> the width of the vertical scrollbar. As
+      that means it can no longer have <code>100%</code> or
+      <code>100vw</code> of the screen, it flags an overflow condition and the
+      horizontal scrollbar is turned on. The <code>auto</code> default takes the
+      vertical scrollbar into account and does not trigger an overflow
+      condition.
+    </p>
+    <h2>Setting the Size of Empty Elements</h2>
+    <p>
+      If you want to have an empty wrapper for later use, setting a
+      <code>min-height</code> with a percentage will not work if the body only
+      has a <code>min-height</code> itself. You need to set an explicit height
+      or some padding i.e. <code>padding-top: 25%</code> this will use 25% of
+      the parent's (in this case, the body's) <em>width</em> even though no
+      explicit width has been set on the body (see the empty
+      <code>div</code> below).
+    </p>
+
+    <div>
+      <!-- empty div to test sizing -->
+    </div>
+  </body>
+</html>

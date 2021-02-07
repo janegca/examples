@@ -1,12 +1,13 @@
 /* -- Custom Properties and Resets -- */
 :root {
   /* Element Background Colors used:
-       lavenderblush, lavender, papayawhip, honeydew 
+       lavenderblush, lavender, papayawhip, honeydew, alicblue
    */
   --clr-body: hsl(340, 100%, 97%);
   --clr-h1: hsl(240, 67%, 94%);
   --clr-html: hsl(37, 100%, 92%);
   --clr-para: hsl(120, 100%, 97%);
+  --clr-div: aliceblue;
 
   /* Element outline colours */
   --out-body: hsl(340, 100%, 90%);
@@ -23,6 +24,8 @@
 }
 
 html {
+  /* min-height: 100%; */
+
   /* Reset the box-sizing */
   box-sizing: border-box;
 
@@ -40,11 +43,14 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  /* No need to set the width, the default 'auto'
+     works fine.
+   */
+  min-height: 100vh;
+
   background-color: var(--clr-body);
   outline: 0.2em solid var(--out-body);
 }
@@ -55,6 +61,19 @@ h1 {
 }
 
 p {
+  padding: 1rem;
+
   background-color: var(--clr-para);
   outline: 0.2em dashed var(--out-para);
+}
+
+div {
+  /* needs to have content or a an explicit width or some padding must be set 
+     height and width cannot be set as %'s unless the parent has an explicit
+     width or height i.e. min/max-height/widths are not enough
+     if a % is used for padding, it will be a percentage of the parent's width
+     even if it is not explicitly set
+   */
+  padding-top: 25%;
+  background-color: var(--clr-div);
 }
