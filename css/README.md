@@ -6,6 +6,9 @@
   Basic `box-model` used by CSS for each element's layout
 - [Positioning Elements](https://janegca.github.io/examples/css/positioning/)
   Examples of how elements behave in various positioning contexts
+- [Sizing a Page or Element](https://janegca.github.io/examples/css/sizing) A
+  look at default sizing, standard size resets, and setting the size of a page
+  or element
 - [Transformations](https://janegca.github.io/examples/css/transformations/)
   using the `transform` property
 
