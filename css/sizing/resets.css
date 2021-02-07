@@ -58,3 +58,7 @@ p {
   background-color: var(--clr-para);
   outline: 0.2em dashed var(--out-para);
 }
+
+footer {
+  margin-top: 3vw;
+}

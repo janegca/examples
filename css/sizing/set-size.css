@@ -77,3 +77,7 @@ div {
   padding-top: 25%;
   background-color: var(--clr-div);
 }
+
+footer {
+  margin-top: 3vw;
+}
