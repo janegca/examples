@@ -14,8 +14,8 @@
 
 ## CSS Shape Examples
 
-- [Shapes from Borders and Box Shadows](https://janegca.github.io/examples/shapes/index.html)
-- [Shapes from Gradients](https://janegca.github.io/examples/shapes/gradient-shapes.html)
+- [Shapes from Borders and Box Shadows](https://janegca.github.io/examples/css/shapes/index.html)
+- [Shapes from Gradients](https://janegca.github.io/examples/css/shapes/gradient-shapes.html)
 
 Code on:
 
