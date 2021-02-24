@@ -14,6 +14,9 @@ There are four lifecycle methods associated with them:
 
 ## Examples
 
+- [A Simple Card](https://janegca.github.io/examples/web-components/simple-card/simple-card.html)
+  A simply styled card from a [freeCodeCamp](https://freecodecamp.org) "Applied
+  Visual Design" example
 - [User Card](https://janegca.github.io/examples/web-components/user-card/user-card.html)
   A custom user card with photo, text, and a hide/show info button and some
   styling.
