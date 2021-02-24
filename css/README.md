@@ -12,6 +12,16 @@
 - [Transformations](https://janegca.github.io/examples/css/transformations/)
   using the `transform` property
 
+## CSS Shape Examples
+
+- [Shapes from Borders and Box Shadows](https://janegca.github.io/examples/shapes/index.html)
+- [Shapes from Gradients](https://janegca.github.io/examples/shapes/gradient-shapes.html)
+
+Code on:
+
+- [Github](https://github.com/janegca/examples/tree/main/css/shapes)
+- [Codepen](https://codepen.io/collection/XKjdNk)
+
 ## Specific Elements
 
 - [details-summary](https://janegca.github.io/examples/css/details-summary/details-summary.html)
@@ -23,8 +33,3 @@
   Responsive columns with one line of CSS
 - [One Line CSS Layouts](https://janegca.github.io/examples/css/1-line-layouts/1-line-layouts.html)
   10 examples of 1-line CSS layouts based on Una Kravets examples
-
-## Style Examples
-
-- [CSS heart](https://janegca.github.io/examples/css/heart/heart.html) A simple
-  heart drawn with CSS

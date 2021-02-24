@@ -1,0 +1,378 @@
+/* -- Custom Properties -- */
+:root {
+  /* palette 
+      ryb mode on https://www.sessions.edu/color-calculator/
+   */
+  --dark: hsl(0, 0%, 0%);
+  --light: hsl(0, 0%, 100%);
+  --b: hsl(187, 52%, 80%);
+  --p: hsl(243, 52%, 80%);
+  --g: hsl(127, 52%, 80%);
+  --r: hsl(327, 70%, 67%);
+  --y: hsl(47, 52%, 80%);
+  --b-dk: hsl(187, 47%, 63%);
+
+  --auto-grid-min-size: 10rem;
+}
+
+/* -- Resets -- */
+html {
+  box-sizing: border-box;
+  font-size: calc(1rem + 0.5vmin);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- Utility classes -- */
+.wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5vmin;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 20rem), 1fr)
+  );
+  grid-gap: 0.5rem;
+
+  justify-items: center;
+  margin: 2rem 0;
+}
+
+/* -- General Styling -- */
+
+h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+p {
+  max-width: 40ch;
+  margin: 1.5rem 0 2vmin;
+}
+
+figure {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+
+  text-align: center;
+  outline: 1px solid black;
+}
+figcaption {
+  padding-top: 0.5rem;
+}
+
+figure div {
+  min-height: 100%;
+  background-repeat: no-repeat;
+}
+
+.syntax {
+  display: flex;
+  gap: 1rem;
+}
+
+.syntax p {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.auto-grid > h3 {
+  align-self: center;
+}
+
+/* -- Basic Gradients -- */
+.lg-vert {
+  background-image: linear-gradient(var(--b), var(--r));
+}
+.lg-horiz {
+  background-image: linear-gradient(to right, var(--b), var(--r));
+}
+
+.lg-diag {
+  background-image: linear-gradient(to top right, var(--b), var(--r));
+}
+
+.lg-multi-clr {
+  background-image: linear-gradient(
+    to right,
+    var(--b),
+    var(--g),
+    var(--y),
+    var(--r)
+  );
+}
+
+.lg-no-clr {
+  background-image: linear-gradient(var(--b), transparent);
+}
+
+.lg-full-stop {
+  background-image: linear-gradient(
+    var(--b) 41%,
+    var(--r) 42%,
+    var(--y) 43%,
+    var(--y) 53%,
+    var(--r) 54%,
+    var(--g) 55%
+  );
+}
+
+/* 
+    Note: 
+        out of order stops are treated as hard-stops
+        the line between red and green is hard, between
+        green and yellow, gradient, between yellow and blue, hard
+ */
+.lg-angled-stops {
+  background-image: linear-gradient(
+    55deg,
+    var(--r) 30%,
+    var(--g) 10%,
+    var(--y) 60%,
+    var(--b) 40%
+  );
+}
+
+.lg-0deg {
+  background-image: linear-gradient(0deg, var(--r), var(--b));
+}
+.lg-90deg {
+  background-image: linear-gradient(90deg, var(--r), var(--b));
+}
+.lg-180deg {
+  background-image: linear-gradient(180deg, var(--r), var(--b));
+}
+.lg-270deg {
+  background-image: linear-gradient(270deg, var(--r), var(--b));
+}
+
+/* radial gradients */
+.rg-ellipse {
+  background-image: radial-gradient(ellipse, var(--y), var(--r));
+}
+
+.rg-circle {
+  background-image: radial-gradient(circle, var(--y), var(--r));
+}
+
+.rg-closest {
+  background-image: radial-gradient(circle closest-side, var(--y), var(--r));
+}
+
+.rg-tr {
+  background-image: radial-gradient(circle at top right, var(--y), var(--r));
+}
+
+.rg-pos {
+  background: radial-gradient(150px 40px at 195px 90%, var(--y), var(--r));
+}
+
+.rg-multi {
+  background: radial-gradient(circle at top left, var(--b), transparent 200px),
+    radial-gradient(circle at top right, var(--y), transparent 200px),
+    radial-gradient(at bottom left, var(--p), transparent 400px),
+    radial-gradient(at bottom right, var(--r), transparent 400px);
+}
+
+.rg-repeating {
+  background-image: repeating-radial-gradient(
+    var(--r),
+    var(--r) 10px,
+    var(--b) 10px,
+    var(--b) 20px
+  );
+}
+
+/* conic gradients
+      they look better in the round
+ */
+[class*="cg-"] {
+  border-radius: 50%;
+}
+
+.cg-basic {
+  background-image: conic-gradient(var(--y), var(--r), var(--y));
+}
+
+.cg-wheel {
+  background-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+}
+
+.cg-pie-chart {
+  background-image: conic-gradient(var(--p) 40%, var(--g) 0 70%, var(--r) 0);
+}
+
+.cg-repeating {
+  background: repeating-conic-gradient(
+    from -45deg,
+    red 45deg,
+    orange,
+    yellow,
+    green,
+    blue 225deg
+  );
+}
+
+/* -- Shapes 
+    49.5% / 50% - slight difference in sizing for radial gradients
+                  prevents a jagged edge
+ -- */
+
+.angle-15 {
+  background: linear-gradient(
+        -15deg,
+        var(--b) 12%,
+        hsla(327, 70%, 67%, 0.1) 12.5%
+      )
+      100% 100% / 50em 5em,
+    linear-gradient(15deg, var(--r) 12%, hsla(187, 52%, 80%, 0.2) 12.5%) 0% 0% /
+      50em 5em;
+
+  /* need to repeat this here as using the background shortcut property 
+     resets all missing background properties to their initial values
+   */
+  background-repeat: no-repeat;
+}
+
+/* arrows 
+    create individual arrows or create a single arrow and rotate
+ */
+.arrow-left {
+  background: conic-gradient(
+      from 45deg,
+      var(--p) 25%,
+      transparent 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 50% / 10vmin 10vmin;
+
+  background-repeat: no-repeat;
+}
+
+.arrow-right {
+  background: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      transparent 0% 50%,
+      var(--p) 0% 75%,
+      transparent 0%
+    )
+    50% 50% / 10vmin 10vmin;
+
+  background-repeat: no-repeat;
+}
+
+.arrow-down {
+  background: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      transparent 0% 50%,
+      transparent 0% 75%,
+      var(--p) 0%
+    )
+    50% 50% / 10vmin 10vmin;
+
+  background-repeat: no-repeat;
+}
+
+.arrow-up {
+  background: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--p) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 50% / 10vmin 10vmin;
+
+  background-repeat: no-repeat;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  left: 55%;
+
+  width: 65%;
+  height: 2.5rem;
+  min-height: unset;
+
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, var(--b-dk) 55%, var(--b));
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
+
+  transform: translate(-50%, -50%);
+}
+
+.button + figcaption {
+  position: absolute;
+  bottom: -17%;
+  left: 0;
+
+  display: inline-block;
+  width: 120%;
+
+  outline: 1px solid black;
+}
+
+.circle {
+  background-image: radial-gradient(
+    100% 100% at center,
+    var(--b) 49.5%,
+    transparent 50%
+  );
+}
+
+.cylinder {
+  background-image: linear-gradient(
+    to right,
+    hsl(187, 47%, 73%),
+    hsl(187, 52%, 95%),
+    var(--b),
+    hsl(187, 47%, 53%)
+  );
+}
+
+.stripes-diag {
+  background-color: var(--b-dk);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    hsla(0, 0%, 100%, 0.3),
+    hsla(0, 0%, 100%, 0.3) 1em,
+    transparent 1em,
+    transparent 2em
+  );
+}
+
+.stripes-horiz {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--p),
+    var(--p) 1em,
+    var(--g) 1em,
+    var(--g) 2em
+  );
+}
+.stripes-vert {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--g),
+    var(--g) 20px,
+    var(--y) 20px,
+    var(--y) 40px
+  );
+}

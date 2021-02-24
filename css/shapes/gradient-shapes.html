@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+  Ref: https://css-tricks.com/a-complete-guide-to-css-gradients/
+       https://css-tricks.com/radial-gradient-recipes/
+       https://css-tricks.com/background-patterns-simplified-by-conic-gradients/
+       https://patrickbrosset.com/articles/2015-03-27-do-you-really-understand-CSS-linear-gradients/
+       https://www.w3docs.com/learn-css/css-gradients.html
+       https://www.webdirections.org/resources/lea-verou-mastering-css3-gradients/
+       
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gradient-shapes.css" />
+    <title>Shapes from Gradients</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Basic Gradients -->
+      <section>
+        <h2>Basic Gradients</h2>
+
+        <div class="syntax">
+          <p>
+            <strong><samp> linear-gradient</samp></strong>
+            <code>
+              ( [ &lt;angle&gt; | to &lt;side-or-corner&gt; ]? ,
+              &lt;color-stop-list&gt; )</code
+            >
+            <br /><br />
+            <code>
+              &lt;side-or-corner&gt; = [to left | to right] || [to top | to
+              bottom]
+            </code>
+          </p>
+          <p>
+            <strong><samp> radial-gradient</samp></strong>
+            <code>
+              ( [ &lt;ending-shape&gt; || &lt;size&gt; ]? [ at &lt;position&gt;
+              ]? , &lt;color-stop-list&gt;);
+            </code>
+          </p>
+          <p>
+            <strong><samp>conic-gradient</samp></strong>
+            <code>
+              ( [ from &lt;angle&gt; ]? [ at &lt;position&gt; ]?,
+              &lt;angular-color-stop-list&gt; )
+            </code>
+          </p>
+        </div>
+
+        <div class="auto-grid">
+          <!-- Linear gradients -->
+          <figure>
+            <div class="lg-vert"></div>
+            <figcaption>Linear Vertical</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-horiz"></div>
+            <figcaption>Linear Horizontal</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-diag"></div>
+            <figcaption>Linear Diagonal</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-multi-clr"></div>
+            <figcaption>Multi-coloured</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-no-clr"></div>
+            <figcaption>Linear Transparent</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-full-stop"></div>
+            <figcaption>Linear Full-stop</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-angled-stops"></div>
+            <figcaption>Linear Angled Stops</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-0deg"></div>
+            <figcaption>Linear 0&deg;</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-90deg"></div>
+            <figcaption>Linear 90&deg;</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-180deg"></div>
+            <figcaption>Linear 180&deg;</figcaption>
+          </figure>
+          <figure>
+            <div class="lg-270deg"></div>
+            <figcaption>Linear 270&deg;</figcaption>
+          </figure>
+
+          <!-- Radial gradients -->
+          <h3>
+            Radial <br />
+            Gradients
+          </h3>
+
+          <figure>
+            <div class="rg-ellipse"></div>
+            <figcaption>Radial Gradient</figcaption>
+          </figure>
+          <figure>
+            <div class="rg-circle"></div>
+            <figcaption>Radial Circle</figcaption>
+          </figure>
+          <figure>
+            <div class="rg-closest"></div>
+            <figcaption>Radial Closest Side</figcaption>
+          </figure>
+          <figure>
+            <div class="rg-tr"></div>
+            <figcaption>Radial Top-Right</figcaption>
+          </figure>
+          <figure>
+            <div class="rg-pos"></div>
+            <figcaption>Radial Positioned</figcaption>
+          </figure>
+          <figure>
+            <div class="rg-multi"></div>
+            <figcaption>Radial Multiples</figcaption>
+          </figure>
+          <figure>
+            <div class="rg-repeating"></div>
+            <figcaption>Repeating Radial</figcaption>
+          </figure>
+          <!-- Conic Gradients -->
+          <h3>
+            Conic <br />
+            Gradients
+          </h3>
+          <figure>
+            <div class="cg-basic"></div>
+            <figcaption>Conic Gradient</figcaption>
+          </figure>
+          <figure>
+            <div class="cg-wheel"></div>
+            <figcaption>Color Wheel</figcaption>
+          </figure>
+          <figure>
+            <div class="cg-pie-chart"></div>
+            <figcaption>Pie Chart</figcaption>
+          </figure>
+          <figure>
+            <div class="cg-repeating"></div>
+            <figcaption>Repeating Conic</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Shapes -->
+      <section>
+        <h2>Shapes and Patterns from Gradients</h2>
+        <div class="auto-grid">
+          <figure>
+            <div class="circle"></div>
+            <figcaption>A Solid Circle</figcaption>
+          </figure>
+          <figure>
+            <div class="angle-15"></div>
+            <figcaption>Angular Sections</figcaption>
+          </figure>
+          <div>
+            <p>
+              The 15&deg; gradients cut across the bottom left and bottom right
+              corners. The background color shows the full size of the gradient
+              area.
+            </p>
+          </div>
+          <figure>
+            <div class="cylinder"></div>
+            <figcaption>A Cylinder Highlight</figcaption>
+          </figure>
+          <figure>
+            <div class="stripes-vert"></div>
+            <figcaption>Vertical Stripes</figcaption>
+          </figure>
+          <figure>
+            <div class="stripes-horiz"></div>
+            <figcaption>Horizontal Stripes</figcaption>
+          </figure>
+          <figure>
+            <div class="stripes-diag"></div>
+            <figcaption>Diagonal Stripes</figcaption>
+          </figure>
+          <figure>
+            <div class="arrow-right"></div>
+            <figcaption>Arrow Right</figcaption>
+          </figure>
+          <figure>
+            <div class="arrow-left"></div>
+            <figcaption>Arrow Left</figcaption>
+          </figure>
+          <figure>
+            <div class="arrow-down"></div>
+            <figcaption>Arrow Down</figcaption>
+          </figure>
+          <figure>
+            <div class="arrow-up"></div>
+            <figcaption>Arrow Up</figcaption>
+          </figure>
+          <figure>
+            <div class="button"></div>
+            <figcaption>A Button</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
