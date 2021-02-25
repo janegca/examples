@@ -2,6 +2,7 @@
 
 ## Basic Concepts
 
+- [Background Images](./bg-images/)
 - [The box-model](https://janegca.github.io/examples/css/box-model/box-model.html)
   Basic `box-model` used by CSS for each element's layout
 - [Positioning Elements](https://janegca.github.io/examples/css/positioning/)
