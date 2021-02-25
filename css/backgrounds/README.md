@@ -217,9 +217,166 @@ section {
 }
 ```
 
-The layers stack up, with the first layer being the bottom most last and the
-only one which can have a background color. In the above example, `one.png` will
-sit on top of `two.png` with both positioned in the top, left corner.
+The layers stack up, with the first layer being the bottom most and the only one
+which can have a background color. In the above example, `one.png` will sit on
+top of `two.png` with both positioned in the top, left corner.
+
+## Gradients
+
+### Linear Gradients
+
+Gradients are also considered to be images.
+
+```
+      linear-gradient(
+          [[ <angle> | to <side-or-quadrant> ],]?
+          [ <color-stop> [, <color-hint>]? ]# ,
+          <color-stop>
+      )
+```
+
+The direction always points to the gradient line direction. You can use `rgba()`
+or `hsla` to fade to a transparency instead of solid colour.
+
+```css
+div {
+  background-image: linear-gradient(
+    to right,
+    rgba(200, 200, 200, 1),
+    rgba(200, 200, 200, 0)
+  );
+}
+```
+
+Each layer can have only one angle or direction but multiple colours and stops.
+The following creates stripes:
+
+```css
+.stripes {
+  background-image: linear-gradient(
+    90deg,
+    gray 0%,
+    gray 25%,
+    transparent 25%,
+    transparent 50%,
+    gray 50%,
+    gray 75%,
+    transparent 75%,
+    transparent 100%
+  );
+}
+```
+
+### Colour Hints
+
+Colour hints can be used to change the linear progression of a gradient.
+Normally there is a smooth transition from one shade to another with the colour
+between two stops being the mid-value between the colours on either side of the
+stop. This can be altered by adding stops. For example,
+
+```css
+#ex01 {
+  background: linear-gradient(to right, #000 25%, rgb(90%, 90%, 90%) 75%);
+}
+#ex02 {
+  background: linear-gradient(to right, #000 25%, 33%, rgb(90%, 90%, 90%) 75%);
+}
+#ex03 {
+  background: linear-gradient(to right, #000 25%, 67%, rgb(90%, 90%, 90%) 75%);
+}
+#ex04 {
+  background: linear-gradient(to right, #000 25%, 25%, rgb(90%, 90%, 90%) 75%);
+}
+#ex05 {
+  background: linear-gradient(to right, #000 25%, 75%, rgb(90%, 90%, 90%) 75%);
+}
+```
+
+generates
+
+![Differing Midpoint Hints](./images/colour-hints.png)
+
+### Radial Gradients
+
+```
+  radial-gradient(
+    [ [ <shape> ‖ <size> ] [ at <position>]? , | at <position>, ]?
+    [ <color-stop> [, <color-hint>]? ] [, <color-stop> ]+
+)
+```
+
+Radial gradients can have one of two shapes: circle or ellipse, and can be
+sized. By default, the gradient is centered.
+
+An ellipse requires two positions, one for the horizontal axis, the other for
+the vertical axis. Percentage values can only be used with ellipses.
+
+There are four keywords that can be used: closest-side, farthest-side,
+closes-corner, farthest-corner. For circles, the gradient ray will touch the
+side/corner closest/farthest from the circle's center. For ellispes, the
+gradient ray touches the closest/farthest side from the horizontal and vertical
+axes. For corners, it uses the one closest/farthest from the center and adjusts
+the other axes accordingly.
+
+You can alter the gradient origin using position offsets i.e. top left, bottom
+right, 30px 50px, etc. You can also use colour stops and colour hints.
+
+You can create a mirrored gradient by using a zero width:
+`radial-gradient(0px 50% at center, purple 0px, gold 100px)`
+
+![Mirrored Gradient](./images/mirror-gradient.png)
+
+Gradients can also be used to create a tiling effect:
+
+```css
+body {
+  background: tan center/25px 25px repeat radial-gradient(circle at center, rgba(0, 0, 0, 0.1), rgba(
+          0,
+          0,
+          0,
+          0.1
+        ) 10px, transparent 10px, transparent);
+}
+```
+
+produces a dot pattern:
+
+![Gradient Tile](./images/gradient-tile.png)
+
+```css
+section {
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 128, 128, 0.25),
+      transparent 75%
+    ), linear-gradient(
+      89deg,
+      transparent,
+      transparent 30%,
+      #510a0e 35%,
+      #510a0e 40%,
+      #61100f 43%,
+      #b93f3a 50%,
+      #4b0408 55%,
+      #6a0f18 60%,
+      #651015 65%,
+      #510a0e 70%,
+      #510a0e 75%,
+      rgba(255, 128, 128, 0) 80%,
+      transparent
+    ), linear-gradient(92deg, #510a0e, #510a0e 20%, #61100f 25%, #b93f3a 40%, #4b0408
+        50%, #6a0f18 70%, #651015 80%, #510a0e 90%, #510a0e);
+  background-size: auto, 300px 100%, 109px 100%;
+  background-repeat: repeat-x;
+}
+```
+
+produces a curtain effect:
+
+![Curtain Effect](./images/gradient-curtain.png)
+
+There are also repeating gradient functions: `repeating-linear-gradient()` and
+`repeating-radial-gradient()`
 
 References:
 
