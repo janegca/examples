@@ -378,6 +378,8 @@ produces a curtain effect:
 There are also repeating gradient functions: `repeating-linear-gradient()` and
 `repeating-radial-gradient()`
 
+For more notes on gradients see [shapes](../shapes/gradient-shapes.html)
+
 References:
 
 - [CSS: The Definitive Guide, 4th Edition by Eric A. Meyer and Estelle Weyl](https://www.oreilly.com/library/view/css-the-definitive/9781449325053/)
