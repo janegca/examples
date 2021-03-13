@@ -316,6 +316,30 @@ figure div {
   );
 }
 
+.circle-bordered {
+  background:
+    /* center solid circle 10% of div size */ radial-gradient(
+        at center center,
+        orchid 10%,
+        transparent 10%
+      )
+      0 0 / 100% 100%,
+    /* circle with border 
+          25% of div size
+          border is 2% of div in width
+     */
+      radial-gradient(
+        at center center,
+        thistle 25%,
+        orchid 25%,
+        orchid 27%,
+        transparent 27%
+      )
+      0 0 / 100% 100%;
+
+  background-repeat: no-repeat;
+}
+
 .cylinder {
   background-image: linear-gradient(
     to right,
@@ -337,6 +361,39 @@ figure div {
     transparent 100%
   );
   background-color: black;
+}
+
+.ellipses {
+  background:
+    /* center solid circle 10% of div size */ radial-gradient(
+        at center center,
+        orchid 10%,
+        transparent 10%
+      )
+      0 0 / 100% 100%,
+    /* 
+    Same as drawing a circle
+    but keep width < height or
+    height < width
+  */
+      radial-gradient(
+        at center center,
+        thistle 25%,
+        orchid 25%,
+        orchid 27%,
+        transparent 27%
+      )
+      50% 50% / 100% 65%,
+    radial-gradient(
+        at center center,
+        thistle 25%,
+        orchid 25%,
+        orchid 27%,
+        transparent 27%
+      )
+      50% 50% / 90% 100%;
+
+  background-repeat: no-repeat;
 }
 
 .stripes-diag {
@@ -367,4 +424,12 @@ figure div {
     var(--y) 20px,
     var(--y) 40px
   );
+}
+
+.triangle {
+  background: linear-gradient(45deg, transparent 50%, red 50%) 2em 5em / 3em 3em,
+    linear-gradient(-45deg, transparent 50%, blue 50%) 5em 5em / 3em 3em;
+
+  background-repeat: no-repeat;
+  background-color: white;
 }
