@@ -1,0 +1,154 @@
+/* -- Custom Properties -- */
+:root {
+  /* palette 
+      ryb mode on https://www.sessions.edu/color-calculator/
+   */
+  --dark: hsl(0, 0%, 0%);
+  --light: hsl(0, 0%, 100%);
+  --b: hsl(187, 52%, 80%);
+  --p: hsl(243, 52%, 80%);
+  --g: hsla(127, 52%, 80%, 0.7);
+  --r: hsl(327, 70%, 67%);
+  --y: hsl(47, 52%, 80%);
+  --o: hsla(28, 100%, 86%, 0.7);
+  --b-dk: hsl(187, 47%, 63%);
+}
+
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  font-size: calc(0.75rem + 0.75vmin);
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 1em;
+  text-align: center;
+}
+
+/* -- Wrapper -- */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+  grid-gap: 1em;
+  width: 70%;
+
+  margin: 1em auto;
+}
+
+div:not([class]) {
+  background-color: var(--g);
+}
+
+/* -- Examples -- */
+div:not(.wrapper) {
+  display: grid;
+  place-content: center;
+  width: 12em;
+  height: 12em;
+
+  border: 1px solid darkgray;
+  text-align: center;
+}
+
+.circle.full {
+  background-image: radial-gradient(
+    100% 100% at center,
+    var(--b) 49.5%,
+    transparent 50%
+  );
+}
+
+/* Circle halves are given by opposite sides */
+.circle.half.left {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at right center, 
+    var(--b) 49.5%, transparent 50%)
+    100% 0/ 10em;
+
+  background-repeat: no-repeat;
+}
+
+.circle.half.right {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at left center, 
+    var(--b) 49.5%, transparent 50%)
+    0% 0/ 10em;
+
+  background-repeat: no-repeat;
+}
+
+.circle.half.top {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at center bottom, 
+    var(--b) 49.5%, transparent 50%)
+    0 -4em/ 12em 10em;
+
+  background-repeat: no-repeat;
+}
+
+.circle.half.bottom {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at center top, 
+    var(--b) 49.5%, transparent 50%)
+    0 6em/ 12em 10em;
+
+  background-repeat: no-repeat;
+}
+
+/* Corners are given by opposite coords */
+.circle.qrt-tl {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at bottom right, 
+    var(--b) 49.5%, transparent 50%)
+    0 0 / 100%;
+
+  background-repeat: no-repeat;
+}
+
+.circle.qrt-tr {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at bottom left, 
+    var(--b) 49.5%, transparent 50%)
+    0 0 / 100%;
+
+  background-repeat: no-repeat;
+}
+
+.circle.qrt-bl {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at top right, 
+    var(--b) 49.5%, transparent 50%)
+    0 0 / 100%;
+
+  background-repeat: no-repeat;
+}
+
+.circle.qrt-br {
+  /* prettier-ignore */
+  background: radial-gradient(
+    circle at top left, 
+    var(--b) 49.5%, transparent 50%)
+    0 0 / 100%;
+
+  background-repeat: no-repeat;
+}

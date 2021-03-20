@@ -17,6 +17,7 @@
 
 - [Shapes from Borders and Box Shadows](https://janegca.github.io/examples/css/shapes/index.html)
 - [Shapes from Gradients](https://janegca.github.io/examples/css/shapes/gradient-shapes.html)
+- [Circle Shapes from `radial-gradient()`](https://janegca.github.io/examples/css/shapes/circles.html)
 
 Code on:
 
