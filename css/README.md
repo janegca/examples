@@ -35,3 +35,8 @@ Code on:
   Responsive columns with one line of CSS
 - [One Line CSS Layouts](https://janegca.github.io/examples/css/1-line-layouts/1-line-layouts.html)
   10 examples of 1-line CSS layouts based on Una Kravets examples
+
+## Transition and Animation Examples
+
+- [Card Hover](https://janegca.github.io/examples/css/animations/card-hover/index.html)
+- [Icon Reveal](https://janegca.github.io/examples/css/animations/icon-reveal/index.html)

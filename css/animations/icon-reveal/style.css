@@ -1,0 +1,52 @@
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  width: 15em;
+  height: 10em;
+  padding: 1em;
+
+  border-radius: 1em;
+  background: #2196f3;
+  box-shadow: 0.1em 0.1em 0.4em #848484;
+
+  font-family: sans-serif;
+  font-size: calc(0.75rem + 0.75vmin);
+  color: white;
+
+  transition: all 0.5s linear;
+  cursor: pointer;
+
+  /* hides the info element under info-icon */
+  clip-path: circle(0.95em at 2em 2em);
+}
+
+.info:hover {
+  /* reveals the full info element */
+  clip-path: circle(20em at 2em 2em);
+}
+
+.info-icon {
+  width: 2em;
+  height: 2em;
+
+  border-radius: 50%;
+  background: #ff1493;
+
+  text-align: center;
+  line-height: 2em;
+}
+
+.info-text {
+  padding: 0.5em 0.75em;
+}
+
+.info-description {
+  margin-top: 0.5em;
+}

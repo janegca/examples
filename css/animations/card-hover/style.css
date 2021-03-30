@@ -1,0 +1,42 @@
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 200px;
+
+  border-radius: 8px;
+  border: 1px solid black;
+
+  text-align: center;
+
+  background-color: pink;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: 30%;
+
+  text-align: center;
+  background-color: aliceblue;
+
+  clip-path: inset(100% 0% 0%);
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-text {
+  padding-top: 1em;
+}
+
+.card:hover .card-footer {
+  clip-path: inset(0% 0% 0%);
+}
