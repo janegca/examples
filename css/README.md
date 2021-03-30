@@ -40,3 +40,6 @@ Code on:
 
 - [Card Hover](https://janegca.github.io/examples/css/animations/card-hover/index.html)
 - [Icon Reveal](https://janegca.github.io/examples/css/animations/icon-reveal/index.html)
+
+Code is on [Codepen](https://codepen.io/collection/AxvEov) and
+[Github](https://github.com/janegca/examples/tree/main/css/animations)
