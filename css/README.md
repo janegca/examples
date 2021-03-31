@@ -23,7 +23,7 @@
 Code on:
 
 - [Github](https://github.com/janegca/examples/tree/main/css/shapes)
-- [Codepen](https://codepen.io/collection/XKjdNk)
+- [Codepen](https://codepen.io/collection/XKjdNk) (no clip-path() shapes)
 
 ## Specific Elements
 
