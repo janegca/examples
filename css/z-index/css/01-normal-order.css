@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 1em;
+
+  font-size: calc(0.625rem + 1vmin);
+}
+
+div {
+  width: 10em;
+  height: 10em;
+  padding: 0.2em;
+
+  background-color: #666;
+  color: white;
+  text-align: center;
+  line-height: 10em;
+}
+
+/* No positioning, normal flow order */
+#first {
+  background-color: hsla(327, 100%, 58%, 0.7);
+}
+
+#second {
+  background-color: hsla(195, 75%, 46%, 0.7);
+}
+
+#third {
+  background-color: hsla(120, 33%, 50%, 0.8);
+}
