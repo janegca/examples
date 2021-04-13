@@ -75,6 +75,7 @@ div:not(.container) {
   width: 15em;
   height: 15em;
   background-color: #ccc;
+  text-align: right;
 
   /* these 3 properties, when set,
      establish a new 'stacking context'
@@ -118,13 +119,13 @@ div:not(.container) {
 */
 #second {
   top: 15%;
-  left: 25%;
+  left: 22%;
 
   background-color: hsla(195, 75%, 46%, 0.7);
 }
 
 #third {
-  top: 35%;
+  top: 30%;
   left: 10%;
 
   background-color: hsla(120, 33%, 50%, 0.8);

@@ -1,0 +1,95 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 1em;
+
+  font-size: calc(0.625rem + 1vmin);
+}
+
+/* Removed all the position and z-index
+   values. Elements follow normal order.
+   Added transforms to #first, #child, and #second
+   each of which sets up a new stack contexts BUT
+   all with respect to the :root stacking context.
+
+   If elements are positioned, z-order defaults
+   to normal stacking order.
+ */
+div:not(.container) {
+  /* position: absolute; */
+  width: 10em;
+  height: 10em;
+  padding: 0.2em;
+
+  background-color: #666;
+  color: white;
+  text-align: center;
+  line-height: 10em;
+}
+
+.container {
+  width: 15em;
+  height: 15em;
+  background-color: #ccc;
+  text-align: right;
+
+  outline: 1px solid red;
+}
+
+#first {
+  background-color: hsla(327, 100%, 58%, 0.7);
+
+  /* if set, child disappears */
+  /* overflow: hidden; */
+
+  /* this rotation effects the #child
+     but also effects the parent .container 
+     which expands to encompass #first and
+     #child in their new positions
+   */
+  transform: rotate(-20deg);
+}
+
+#child {
+  width: 6em;
+  height: 3em;
+  line-height: 3em;
+
+  /* moves between #second and #third elements 
+     will be hidden if parent has overflow: hidden
+   */
+  transform: translateY(11em);
+}
+
+#second {
+  background-color: hsla(195, 75%, 46%, 0.7);
+
+  /* moves down in front of, not behind, #third */
+  transform: translateY(2em);
+}
+
+/* #third is non-positioned with no
+   settings for opacity, transform, or filter
+   so ends up at bottom of stack even though
+   it is the last element in the document order
+ */
+#third {
+  /* force overlap of earlier element */
+  margin-top: -6em;
+  margin-left: 2em;
+  background-color: hsla(120, 33%, 50%, 0.8);
+
+  /* if this is set, #third moves back to top of
+     stack
+   */
+  /* opacity: 0.8; */
+}

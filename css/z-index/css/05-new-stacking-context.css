@@ -60,7 +60,7 @@ div {
 
 #second {
   top: 15%;
-  left: 25%;
+  left: 22%;
 
   background-color: hsla(195, 75%, 46%, 0.7);
   box-shadow: 0em 0.2em 0.4em 0 hsl(195, 30%, 46%);
@@ -68,7 +68,7 @@ div {
 }
 
 #third {
-  top: 35%;
+  top: 30%;
   left: 10%;
   background-color: hsla(120, 33%, 50%, 0.8);
 }
