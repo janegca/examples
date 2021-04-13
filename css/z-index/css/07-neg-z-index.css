@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 1em;
+
+  font-size: calc(0.625rem + 1vmin);
+}
+
+div {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  padding: 0.2em;
+
+  background-color: #666;
+  color: white;
+  text-align: center;
+  line-height: 10em;
+}
+
+/*
+    To place a child element 'behind' it's parent
+    element:  
+     1. ensure the parent and child element's are
+        part of the same stacking context
+        i.e. the 'parent' element DOES NOT establish
+             its own stacking context
+     2. set the z-index property on the child to a
+        negative value
+ */
+
+#first {
+  top: 10%;
+  background-color: hsla(327, 100%, 58%, 0.7);
+
+  /* don't establish a new stacking context 
+      no z-index, opacity, transform, or filter
+   */
+  /* z-index: 1; */
+  /* opacity: 0.9; */
+  /* transform: scale(0.5); */
+  /* filter: blur(2px); */
+}
+
+#child {
+  width: 6em;
+  height: 3em;
+  left: -1em;
+  bottom: 1em;
+  line-height: 3em;
+
+  /* 
+    if the parent element does not establish
+    a new stacking context, a negative z-index
+    value will push this child element behind
+    the parent
+  */
+  z-index: -1;
+}
+
+#second {
+  top: 15%;
+  left: 25%;
+
+  background-color: hsla(195, 75%, 46%, 0.7);
+  box-shadow: 0em 0.2em 0.4em 0 hsl(195, 30%, 46%);
+  z-index: 2;
+}
+
+#third {
+  top: 37%;
+  left: 10%;
+  background-color: hsla(120, 33%, 50%, 0.8);
+}
