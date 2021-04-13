@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 1em;
+
+  font-size: calc(0.625rem + 1vmin);
+}
+
+/*
+    "Stacking contexts are not necessarily related 
+      to containing blocks"
+          W3C Editor's Draft §9.9.1
+
+    #first, #second, and #third are siblings
+    with the :root element (by default) acting 
+    at the stacking context
+
+    If we do not set z-index values on any element,
+    normal (document) order applies
+
+    If we set the z-index on #first to 1, it moves
+    above #second and #third.
+    
+    Then, for watever reason, we decide #first needs 
+    to be placed in another element whose opacity
+    should be 0.8 ... suddenly all is not well with
+    out original layout, the elements have returned
+    to their normal order, why??
+
+    An 'opacity' value <> 1 creates a new stacking
+    context for an element (the 'container') AND
+    its children; #first and its children are now
+    constrained to the container's stacking context
+    where before they were part of the :root's stacking
+    context
+
+    The same happens if a 'transform' or 'filter'
+    is applied to an element; they create a new
+    stacking context for the element which
+    automatically affects all its descendants
+
+    Note that the 'container' in this example IS NOT a 
+    positioned element itself, its child, #first, continues
+    to be positioned relative to the :root element
+
+    Before 'opacity' is set on .container, #first's
+    'containing block' is .container BUT it is part
+    of :root's  'stacking context'. Once the opacity
+    on .container is set, #first's containing block also
+    becomes its stacking context.
+*/
+
+div:not(.container) {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  padding: 0.2em;
+
+  background-color: #666;
+  color: white;
+  text-align: center;
+  line-height: 10em;
+}
+
+.container {
+  width: 15em;
+  height: 15em;
+  background-color: #ccc;
+
+  /* these 3 properties, when set,
+     establish a new 'stacking context'
+     for all the element's positioned 
+     descendants
+  */
+  opacity: 0.8;
+  /* transform: scale(0.5); */
+  /* filter: blur(4px); */
+
+  outline: 1px solid red;
+}
+
+#first {
+  /* positioned relative to :root, not
+     its .container parent
+   */
+  top: 0;
+  left: 0;
+  background-color: hsla(327, 100%, 58%, 0.7);
+
+  /* z-order applies to parent (.container) stacking
+     context, not the :root stacking context
+   */
+  z-index: 1;
+}
+
+/* the child continues to be constrained
+   by its parent contexts
+*/
+#child {
+  width: 6em;
+  height: 3em;
+  left: 2em;
+  bottom: 1em;
+  line-height: 3em;
+}
+
+/* #second and #third continue to exist in the 
+   :root element's stacking context
+*/
+#second {
+  top: 15%;
+  left: 25%;
+
+  background-color: hsla(195, 75%, 46%, 0.7);
+}
+
+#third {
+  top: 35%;
+  left: 10%;
+
+  background-color: hsla(120, 33%, 50%, 0.8);
+}
