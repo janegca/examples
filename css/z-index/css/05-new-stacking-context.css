@@ -29,7 +29,7 @@ div {
 
 /* the new 'child' element stays within the
    stacking context of its parent, the #first
-   element; it's z-index is ignored by the
+   element; its z-index is ignored by the
    #second element's stacking context
 
    note that it appears above the #third element
