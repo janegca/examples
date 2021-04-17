@@ -12,6 +12,7 @@
   or element
 - [Transformations](https://janegca.github.io/examples/css/transformations/)
   using the `transform` property
+- [z-index and Stacking Contexts](https://janegca.github.io/examples/css/z-index/)
 
 ## CSS Shape Examples
 

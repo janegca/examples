@@ -86,8 +86,6 @@ div:not(.container) {
   opacity: 0.8;
   /* transform: scale(0.5); */
   /* filter: blur(4px); */
-
-  outline: 1px solid red;
 }
 
 #first {
