@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* If the parent element's display
+   is set to flex or grid setting
+   a child z-index creates a new
+   stacking context, it is NOT 
+   necessary to set 'position' on the
+   parent or the element itself
+ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  margin: 1em;
+
+  font-size: calc(0.625rem + 1vmin);
+}
+
+div {
+  width: 10em;
+  height: 10em;
+  padding: 0.2em;
+
+  background-color: #666;
+  color: white;
+  text-align: center;
+  line-height: 10em;
+}
+
+/*
+    Normal order is document order, #first will
+    be on bottom. Set the z-index on the #first
+    element and it will move to top of stack
+    Note that setting 'position' is NOT necessary.
+ */
+#first {
+  background-color: hsla(327, 100%, 58%, 0.7);
+
+  /* z-index works without setting position
+     as all elements are 'flex-items' since
+     the parent element, 'body', has a display
+     of 'flex'
+   */
+  z-index: 1;
+
+  /* add shadow to emphasize nearest element */
+  box-shadow: 0em 0.2em 0.4em 0 hsl(195, 30%, 46%);
+}
+
+/*
+    #second and #third applied rules create new
+    stacking contexts for their children
+ */
+#second {
+  /* setting position does create a
+     new stacking context; here, #third is 
+     pushed to the bottom of the stack BUT
+     #first still retains its z-order postion
+     at the top of stack (drawn last, on top
+     of sibling elements and any of their children)
+
+     The element is positioned relative to the viewport
+     as the parent element position is not set
+   */
+  position: absolute;
+  left: 12em;
+  margin-top: -2em;
+  margin-left: -2em;
+  background-color: hsla(195, 75%, 46%, 0.7);
+}
+
+#third {
+  margin-top: 14em;
+  margin-left: -12em;
+  background-color: hsla(120, 33%, 50%, 0.8);
+
+  /* if opacity, filter, or transform is set? 
+  
+     The element's z-order is not affected BUT
+     the element's children become part of a new
+     stacking context.
+   */
+  opacity: 0.5; /* no change to z-order */
+  transform: scale(1.2); /* no change to z-order */
+  filter: blur(0.001px);
+}
+
+#child {
+  width: 6em;
+  height: 2em;
+  margin-top: -3em;
+  margin-left: 2em;
+  line-height: 2em;
+
+  z-index: 2; /* no effect on #first's position */
+}

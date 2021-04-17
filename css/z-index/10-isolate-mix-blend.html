@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+    Ref Source: 
+    https://tympanus.net/codrops/css_reference/z-index/
+    https://tellthemachines.com/stacking-contexts/
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/10-isolate-mix-blend.css" />
+    <title>Stacking Context</title>
+  </head>
+  <body>
+    <!-- (auto) = default z-order position -->
+    <div class="container">
+      <div id="second">
+        Second (auto)
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+      </div>
+    </div>
+  </body>
+</html>

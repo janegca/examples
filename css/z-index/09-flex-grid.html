@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+    Ref Source: 
+      https://tympanus.net/codrops/css_reference/z-index/
+      https://tellthemachines.com/stacking-contexts/
+ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/09-flex-grid.css" />
+    <title>Stacking Context</title>
+  </head>
+  <body>
+    <!-- number = z-order position 
+         default z-order is document order
+    -->
+    <div id="first">First (3)</div>
+    <div id="second">Second (1)</div>
+    <div id="third">
+      Third (2)
+      <div id="child">3rd's Child</div>
+    </div>
+    <br />
+  </body>
+</html>

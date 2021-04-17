@@ -22,7 +22,7 @@ body {
 
     #first, #second, and #third are siblings
     with the :root element (by default) acting 
-    at the stacking context
+    as the stacking context
 
     If we do not set z-index values on any element,
     normal (document) order applies
@@ -43,7 +43,8 @@ body {
     where before they were part of the :root's stacking
     context
 
-    The same happens if a 'transform' or 'filter'
+    The same happens if a 'transform', 'filter',
+    'perspective', 'mix-blend-mode', or 'isolate'
     is applied to an element; they create a new
     stacking context for the element which
     automatically affects all its descendants
