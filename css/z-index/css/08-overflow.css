@@ -28,6 +28,10 @@ div {
 }
 
 #first {
+  /* unset the position and overflow has no effect 
+     on the child */
+  /* position: unset; */
+
   top: 10%;
   background-color: hsla(327, 100%, 58%, 0.7);
 
